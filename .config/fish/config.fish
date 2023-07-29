@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 set theme_powerline_fonts no
-set theme_color_scheme base16
+set theme_color_scheme base16-light
 
 alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 
