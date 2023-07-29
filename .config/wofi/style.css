@@ -1,0 +1,55 @@
+/**
+ * Colors
+ * background: #424b54
+ * red: #ee6352
+ * green: #57a773
+ * blue: #08b2e3
+ */
+
+* {
+  font-family: "Roboto", "FontAwesome";
+  font-size: 16px;
+}
+
+window {
+  background-color: #424b54;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+window > * {
+  padding: 2rem;
+}
+
+#input {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+
+#input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+#entry {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+
+#entry:selected {
+  background-color: #08b2e3;
+  font-weight: bold;
+}
+
+expander list {
+  margin-left: 1rem;
+}
+
+expander list * {
+  color: #000000;
+  font-weight: normal;
+}
