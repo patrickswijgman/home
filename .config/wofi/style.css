@@ -14,7 +14,7 @@
 window {
   background-color: #424b54;
   border: 3px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1rem;
+  border-radius: 8px;
 }
 
 window > * {
@@ -36,20 +36,20 @@ window > * {
 }
 
 #entry {
-  padding: 0.5rem 1rem;
   color: #ffffff;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
 }
 
 #entry:selected {
-  background-color: #08b2e3;
-  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 expander list {
-  margin-left: 1rem;
+  border-radius: 4px;
+  margin: 0.5rem 1rem;
 }
 
 expander list * {
   color: #000000;
-  font-weight: normal;
 }
