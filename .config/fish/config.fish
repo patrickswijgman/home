@@ -3,7 +3,9 @@ if status is-interactive
 end
 
 set theme_powerline_fonts no
-set theme_color_scheme base16-light
+set theme_color_scheme gruvbox
+
+theme_gruvbox 'dark' 'medium'
 
 alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 

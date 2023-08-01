@@ -1,10 +1,10 @@
-/**
- * Colors
- * background: #424b54
- * red: #ee6352
- * green: #57a773
- * blue: #08b2e3
- */
+/* Gruvbox color palette */
+@define-color bg #282828;
+@define-color fg #fbf1c7;
+@define-color danger #fb4934;
+@define-color success #b8bb26;
+@define-color warn #fabd2f;
+@define-color info #83a598;
 
 * {
   font-family: "Roboto", "FontAwesome";
@@ -12,8 +12,8 @@
 }
 
 window {
-  background-color: #424b54;
-  border: 3px solid rgba(255, 255, 255, 0.2);
+  background-color: @bg;
+  border: 3px solid @fg;
   border-radius: 8px;
 }
 
@@ -22,8 +22,8 @@ window > * {
 }
 
 #input {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: @fg;
+  color: @bg;
   border: none;
   border-radius: 1.5rem;
   padding: 0.25rem 1rem;
@@ -36,13 +36,14 @@ window > * {
 }
 
 #entry {
-  color: #ffffff;
+  color: @fg;
   border-radius: 4px;
   padding: 0.5rem 1rem;
 }
 
 #entry:selected {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: @info;
+  color: @bg;
 }
 
 expander list {
@@ -51,5 +52,5 @@ expander list {
 }
 
 expander list * {
-  color: #000000;
+  color: @bg;
 }

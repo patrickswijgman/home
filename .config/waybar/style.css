@@ -1,10 +1,10 @@
-/**
- * Colors
- * background: #424b54
- * red: #ee6352
- * green: #57a773
- * blue: #08b2e3
- */
+/* Gruvbox color palette */
+@define-color bg #282828;
+@define-color fg #fbf1c7;
+@define-color danger #fb4934;
+@define-color success #b8bb26;
+@define-color warn #fabd2f;
+@define-color info #83a598;
 
 * {
   font-family: "Roboto", "FontAwesome";
@@ -12,8 +12,7 @@
 }
 
 window#waybar {
-  background-color: #424b54;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  background-color: @bg;
 }
 
 window#waybar.hidden {
@@ -22,7 +21,7 @@ window#waybar.hidden {
 
 #workspaces button {
   background-color: transparent;
-  color: #ffffff;
+  color: @fg;
   box-shadow: inset 0 -3px transparent;
   border: none;
   border-radius: 0;
@@ -30,43 +29,40 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-  background: inherit;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px @fg;
 }
 
 #workspaces button.focused {
-  background-color: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px @fg;
 }
 
 #workspaces button.urgent {
-  background-color: #ee6352;
+  background-color: @danger;
 }
 
 #window {
-  color: #ffffff;
+  color: @fg;
 }
 
 .modules-right > widget > * {
-  color: #ffffff;
+  color: @fg;
   padding: 0 1rem;
 }
 
 #battery.charging,
 #battery.plugged {
-  background-color: #57a773;
+  background-color: @success;
 }
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
-    color: #424b54;
+    background-color: @fg;
+    color: @bg;
   }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #ee6352;
+  background-color: @danger;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -75,15 +71,11 @@ window#waybar.hidden {
 }
 
 #network.disconnected {
-  background-color: #ee6352;
+  background-color: @danger;
 }
 
 #pulseaudio.muted {
-  background-color: #ee6352;
-}
-
-#tray {
-  background-color: rgba(255, 255, 255, 0.125);
+  background-color: @danger;
 }
 
 #tray > widget > * {
@@ -98,16 +90,11 @@ window#waybar.hidden {
   padding-right: 0.5rem;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #08b2e3;
+  background-color: @info;
 }
 
 #idle_inhibitor.activated {
-  background-color: #ffffff;
-  color: #424b54;
+  background-color: @info;
+  color: @bg;
 }
