@@ -43,10 +43,14 @@ window > * {
 
 #entry:selected {
   background-color: @info;
-  color: @bg;
+}
+
+#text {
+  color: @fg;
 }
 
 expander list {
+  background-color: @info;
   border-radius: 4px;
   margin: 0.5rem 1rem;
 }
