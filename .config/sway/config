@@ -12,7 +12,7 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | wofi --show=drun --prompt="Search..." -i | xargs swaymsg exec --
-set $lock swaylock -f -c '424b54'
+set $lock swaylock -f -c '282828'
 
 include /etc/sway/config-vars.d/*
 
