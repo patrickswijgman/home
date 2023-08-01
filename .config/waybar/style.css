@@ -77,15 +77,15 @@ window#waybar.hidden {
 }
 
 #tray > widget > * {
-  padding: 0 1rem;
+  padding: 0 0.75rem;
 }
 
 #tray:first-child {
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
 }
 
 #tray:last-child {
-  padding-right: 0.5rem;
+  padding-right: 1.25rem;
 }
 
 #tray > .needs-attention {
