@@ -13,6 +13,7 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu dmenu_path | wofi --show=drun --prompt="Search..." -i | xargs swaymsg exec --
 set $lock swaylock -f -c '282828'
+set $shot grimshot copy area
 
 include /etc/sway/config-vars.d/*
 
@@ -76,8 +77,11 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 bindsym $mod+d exec $menu
 
-# Manually lock the screen using Ctrl+Alt+L
+# Manually lock the screen
 bindsym Ctrl+Mod1+l exec $lock
+
+# Take a screenshot
+bindsym $mod+Shift+s exec $shot
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
