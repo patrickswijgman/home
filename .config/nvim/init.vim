@@ -42,5 +42,6 @@ set nobackup
 set colorcolumn=80
 
 " Keybindings
+map q <Nop>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Rg<CR>

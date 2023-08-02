@@ -1,10 +1,9 @@
-/* Gruvbox color palette */
 @define-color bg #282828;
-@define-color fg #fbf1c7;
-@define-color danger #cc241d;
-@define-color success #98971a;
-@define-color warn #d79921;
-@define-color info #458588;
+@define-color fg #ffffff;
+@define-color danger #DB504A;
+@define-color success #6D9F71;
+@define-color warn #EF8354;
+@define-color info #5C9EAD;
 
 * {
   font-family: "Roboto", "FontAwesome";

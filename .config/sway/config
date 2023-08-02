@@ -16,25 +16,19 @@ set $lock swaylock -f -c '282828'
 
 include /etc/sway/config-vars.d/*
 
-### Styling
+### Theme
 
-# Gruvbox color palette
-# text #fbf1c7;
-# focus #3c3836;
-# unfocused #282828;
-# urgent #cc241d;
-
-client.focused #3c3836 #3c3836 #fbf1c7 #3c3836
-client.focused_inactive #282828 #282828 #fbf1c7 #282828
-client.unfocused #282828 #282828 #fbf1c7 #282828
-client.urgent #cc241d #cc241d #fbf1c7 #cc241d
+client.focused #383838 #383838 #ffffff #383838
+client.focused_inactive #282828 #282828 #ffffff
+client.unfocused #282828 #282828 #ffffff
+client.urgent #DB504A #DB504A #ffffff
 
 ### Settings
 
 font Roboto 12
 
 default_border pixel 2
-default_floating_border pixel 2
+default_floating_border normal
 
 ### Startup
 
