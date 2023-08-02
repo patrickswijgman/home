@@ -25,7 +25,7 @@ window > * {
   background-color: @fg;
   color: @bg;
   border: none;
-  border-radius: 0;
+  border-radius: 1.5rem;
   padding: 0.25rem 1rem;
   margin-bottom: 1rem;
 }
@@ -37,6 +37,7 @@ window > * {
 
 #entry {
   color: @fg;
+  border-radius: 4px;
   padding: 0.75rem 1rem;
 }
 
