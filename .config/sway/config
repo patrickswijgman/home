@@ -16,17 +16,30 @@ set $lock swaylock -f -c '282828'
 
 include /etc/sway/config-vars.d/*
 
+### Styling
+
+# Gruvbox color palette
+# text #fbf1c7;
+# focus #3c3836;
+# unfocused #282828;
+# urgent #cc241d;
+
+client.focused #3c3836 #3c3836 #fbf1c7 #3c3836
+client.focused_inactive #282828 #282828 #fbf1c7 #282828
+client.unfocused #282828 #282828 #fbf1c7 #282828
+client.urgent #cc241d #cc241d #fbf1c7 #cc241d
+
 ### Settings
 
 font Roboto 12
 
-default_border none
+default_border pixel 2
+default_floating_border pixel 2
 
 ### Startup
 
 exec blueman-applet
 
-# Sync following settings with '~/.config/gtk-3.0/settings.ini'
 exec gsettings set org.gnome.desktop.interface font-name 'Roboto'
 exec gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 exec gsettings set org.gnome.desktop.interface cursor-size 24
@@ -125,8 +138,8 @@ bindsym $mod+Tab workspace back_and_forth
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+b split horizontal
+bindsym $mod+v split vertical
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking

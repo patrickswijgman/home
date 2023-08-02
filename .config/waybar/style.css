@@ -94,5 +94,4 @@ window#waybar.hidden {
 
 #idle_inhibitor.activated {
   background-color: @info;
-  color: @bg;
 }
