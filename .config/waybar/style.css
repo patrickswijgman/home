@@ -71,7 +71,11 @@ window#waybar.hidden {
   background-color: @danger;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
+  background-color: @danger;
+}
+
+#temperature.critical {
   background-color: @danger;
 }
 
