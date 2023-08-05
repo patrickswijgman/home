@@ -6,6 +6,7 @@
     "pavucontrol",
     "pulseaudio",
     "waybar",
+    "wireplumber",
     "wofi"
   ]
 }

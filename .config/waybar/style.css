@@ -1,4 +1,5 @@
 @define-color bg #282828;
+@define-color bd #383838;
 @define-color fg #ffffff;
 @define-color danger #DB504A;
 @define-color success #6D9F71;
@@ -43,6 +44,7 @@ window#waybar.hidden {
 
 .modules-right > widget > * {
   color: @fg;
+  box-shadow: inset 1px 0 @bd;
   padding: 0 1rem;
 }
 
@@ -80,15 +82,7 @@ window#waybar.hidden {
 }
 
 #tray > widget > * {
-  padding: 0 0.75rem;
-}
-
-#tray:first-child {
-  padding-left: 0.25rem;
-}
-
-#tray:last-child {
-  padding-right: 1.25rem;
+  padding: 0 0.5rem;
 }
 
 #tray > .needs-attention {
