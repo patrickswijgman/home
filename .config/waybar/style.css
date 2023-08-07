@@ -9,6 +9,11 @@
 * {
   font-family: "Roboto", "FontAwesome";
   font-size: 14px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
 }
 
 window#waybar {
@@ -23,8 +28,6 @@ window#waybar.hidden {
   background-color: transparent;
   color: @fg;
   box-shadow: inset 0 -3px transparent;
-  border: none;
-  border-radius: 0;
   padding: 0.25rem 0.5rem;
 }
 
@@ -48,8 +51,7 @@ window#waybar.hidden {
   padding: 0 1rem;
 }
 
-#battery.charging,
-#battery.plugged {
+#battery.charging {
   background-color: @success;
 }
 
@@ -73,6 +75,7 @@ window#waybar.hidden {
   background-color: @danger;
 }
 
+#pulseaudio.muted,
 #wireplumber.muted {
   background-color: @danger;
 }
