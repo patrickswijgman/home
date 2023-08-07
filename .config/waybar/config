@@ -6,7 +6,7 @@
     "modules-right": []
   },
   {
-    "output": "DP-2",
+    "output": ["DP-1", "DP-2"],
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
     "modules-right": [
