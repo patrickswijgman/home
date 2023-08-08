@@ -5,7 +5,7 @@ end
 set theme_powerline_fonts yes
 set theme_color_scheme base16-light
 
-abbr --add ga 'git add -u'
+abbr --add ga 'git add .'
 abbr --add gm 'git commit -m'
 abbr --add gch 'git checkout'
 abbr --add gs 'git status'

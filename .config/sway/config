@@ -17,19 +17,19 @@ set $shot grimshot copy area
 
 include /etc/sway/config-vars.d/*
 
-### Theme
+### Appearance
+
+font Roboto 12
+
+titlebar_padding 8
+smart_borders on
+hide_edge_borders both
+title_align center
 
 client.focused #383838 #383838 #ffffff #383838
 client.focused_inactive #282828 #282828 #ffffff
 client.unfocused #282828 #282828 #ffffff
 client.urgent #DB504A #DB504A #ffffff
-
-### Settings
-
-font Roboto 12
-
-default_border pixel 2
-default_floating_border normal
 
 ### Startup
 
