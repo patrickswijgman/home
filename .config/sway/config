@@ -34,8 +34,10 @@ client.urgent #DB504A #DB504A #ffffff
 ### Startup
 
 exec mako # notifications
-exec kanshi # output configuration
+
+# Tray
 exec blueman-applet # bluetooth
+exec nm-applet --indicator # network
 
 ### Output configuration
 
@@ -47,17 +49,8 @@ exec blueman-applet # bluetooth
 
 # output * bg ~/Pictures/0-6296_minimalist-wallpaper-4k.jpg fill
 
-output DP-2 scale 2
-output eDP-1 disable
-
-# profile {
-#   output DP-2 resolution 2560x1440 position 0,0
-#   output eDP-1 disable
-# }
-
-# profile {
-#   output eDP-1 resolution 1920x1200 position 0,1440
-# }
+output DP-2 scale 1.5
+# output eDP-1 disable
 
 ### Idle configuration
 
