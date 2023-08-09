@@ -15,5 +15,3 @@ abbr --add gpull 'git pull --rebase=merges'
 abbr --add gpush 'git push --set-upstream origin HEAD'
 
 alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
-
-fish_add_path --path /var/lib/flatpak/exports/bin/
