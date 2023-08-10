@@ -7,6 +7,7 @@ set theme_color_scheme base16-light
 
 abbr --add ga 'git add .'
 abbr --add gm 'git commit -m'
+abbr --add gma 'git commit --amend'
 abbr --add gch 'git checkout'
 abbr --add gs 'git status'
 abbr --add gdiff 'git diff'

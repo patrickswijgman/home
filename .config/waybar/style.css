@@ -47,7 +47,6 @@ window#waybar.hidden {
 
 .modules-right > widget > * {
   color: @fg;
-  box-shadow: inset 1px 0 @bd;
   padding: 0 1rem;
 }
 

@@ -11,20 +11,21 @@ set $right Right
 set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show=drun --prompt="Search..." -i | xargs swaymsg exec --
-set $lock swaylock -f -c '282828'
+set $menu dmenu_path | wofi --show=drun --hide-scroll --normal-window --prompt="" -i | xargs swaymsg exec --
+set $lock swaylock
 set $shot grimshot copy area
 
 include /etc/sway/config-vars.d/*
 
 ### Appearance
 
-font Roboto 12
-
-titlebar_padding 8
+font Roboto 10
+titlebar_padding 5
 smart_borders on
 hide_edge_borders both
 title_align center
+default_border normal
+default_floating_border pixel 2
 
 client.focused #383838 #383838 #ffffff #383838
 client.focused_inactive #282828 #282828 #ffffff
@@ -33,6 +34,7 @@ client.urgent #DB504A #DB504A #ffffff
 
 ### Startup
 
+exec kanshi # monitor configuration
 exec mako # notifications
 
 # Tray
@@ -49,14 +51,11 @@ exec nm-applet --indicator # network
 
 output * bg ~/Wallpapers/2.jpg fill
 
-output DP-2 scale 1.5
-# output eDP-1 disable
-
 ### Idle configuration
 
 exec swayidle -w \
-  timeout 300 'swaymsg "output * power off"' \
-  resume 'swaymsg "output * power on"'
+  timeout 300 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"'
 
 ### Input configuration
 
