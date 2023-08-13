@@ -5,9 +5,13 @@ profile {
 
 profile {
 	output eDP-1 disable
-	output DP-5 mode 2560x1440@144Hz
+	output 'Iiyama North America PL2760Q 1154192101586' mode 2560x1440@143.856Hz
 }
 
 profile {
     output eDP-1 enable
+}
+
+profile {
+	output 'Iiyama North America PL2760Q 1154192101586' mode 2560x1440@143.856Hz
 }
