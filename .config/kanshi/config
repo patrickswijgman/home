@@ -9,9 +9,10 @@ profile {
 }
 
 profile {
-    output eDP-1 enable
+	output eDP-1 disable
+	output 'Dell Inc. DELL U2419HC DVJ0VS2' mode 1920x1080@60.000Hz
 }
 
 profile {
-	output 'Iiyama North America PL2760Q 1154192101586' mode 2560x1440@143.856Hz
+    output eDP-1 enable
 }
