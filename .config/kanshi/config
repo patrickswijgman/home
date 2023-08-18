@@ -14,6 +14,11 @@ profile {
 }
 
 profile {
+	output eDP-1 disable
+	output 'Dell Inc. DELL S3422DWG 8BNTS63' mode 3440x1440@59.973Hz
+}
+
+profile {
     output eDP-1 enable
 }
 
