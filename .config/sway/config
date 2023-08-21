@@ -34,8 +34,8 @@ client.urgent #DB504A #DB504A #ffffff
 
 ### Startup
 
-exec_always killall kanshi ; kanshi # monitor configuration
-exec_always killall mako ; mako # notifications
+exec_always kanshi # monitor configuration
+exec_always mako # notifications
 
 # Tray
 exec blueman-applet # bluetooth
