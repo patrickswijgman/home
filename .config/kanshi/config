@@ -1,26 +1,32 @@
+# Laptop - office
+
 profile {
 	output eDP-1 disable
-	output 'Dell Inc. DELL U2720Q 87RFX83' mode 2560x1440
+	output 'Dell Inc. DELL U2720Q 87RFX83' scale 1.5
 }
 
 profile {
 	output eDP-1 disable
-	output 'Iiyama North America PL2760Q 1154192101586' mode 2560x1440@59.951Hz
+	output 'Dell Inc. DELL U2419HC DVJ0VS2'
 }
 
 profile {
 	output eDP-1 disable
-	output 'Dell Inc. DELL U2419HC DVJ0VS2' mode 1920x1080@60.000Hz
-}
-
-profile {
-	output eDP-1 disable
-	output 'Dell Inc. DELL S3422DWG 8BNTS63' mode 3440x1440@59.973Hz
+	output 'Dell Inc. DELL S3422DWG 8BNTS63'
 }
 
 profile {
     output eDP-1 enable
 }
+
+# Laptop - Home
+
+profile {
+	output eDP-1 disable
+	output 'Iiyama North America PL2760Q 1154192101586'
+}
+
+# PC - Home
 
 profile {
 	output 'Iiyama North America PL2760Q 1154192101586' mode 2560x1440@143.856Hz

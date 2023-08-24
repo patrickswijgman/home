@@ -34,8 +34,8 @@ client.urgent #DB504A #DB504A #ffffff
 
 ### Startup
 
-exec kanshi # monitor configuration
-exec mako # notifications
+exec_always kanshi # monitor configuration
+exec_always mako # notifications
 
 # Tray
 exec blueman-applet # bluetooth
@@ -61,7 +61,7 @@ exec swayidle -w \
 input "type:pointer" {
   accel_profile flat
   pointer_accel -0.25
-  scroll_factor 2
+  scroll_factor 1
 }
 
 ### Key bindings
