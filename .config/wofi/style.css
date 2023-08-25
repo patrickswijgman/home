@@ -1,6 +1,6 @@
-@define-color bg #2e3440;
-@define-color bd #3b4252;
-@define-color fg #eceff4;
+@define-color bg #d8dee9;
+@define-color fg #2e3440;
+@define-color input_bg #eceff4;
 @define-color danger #bf616a;
 @define-color success #a3be8c;
 @define-color warn #ebcb8b;
@@ -13,6 +13,7 @@
 
 window {
   background-color: @bg;
+  border-radius: 8px;
 }
 
 window > * {
@@ -20,8 +21,8 @@ window > * {
 }
 
 #input {
-  background-color: @fg;
-  color: @bg;
+  background-color: @input_bg;
+  color: @bg !important;
   border: none;
   border-radius: 1.5rem;
   padding: 0.25rem 1rem;
@@ -49,7 +50,6 @@ window > * {
 
 expander list {
   background-color: @info;
-  margin: 0.5rem 1rem;
 }
 
 expander list * {

@@ -11,7 +11,7 @@ set $right Right
 set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show=drun --hide-scroll --normal-window --prompt="" -i | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show=drun --hide-scroll --no-actions --prompt="" -i | xargs swaymsg exec --
 set $lock swaylock
 set $shot grimshot copy area
 
@@ -25,7 +25,7 @@ smart_borders on
 hide_edge_borders both
 title_align center
 default_border normal
-default_floating_border pixel 2
+default_floating_border normal
 
 client.focused #3b4252 #3b4252 #eceff4 #3b4252
 client.focused_inactive #2e3440 #2e3440 #eceff4
