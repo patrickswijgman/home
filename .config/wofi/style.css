@@ -1,10 +1,15 @@
 @define-color bg #d8dee9;
 @define-color fg #2e3440;
-@define-color input_bg #eceff4;
 @define-color danger #bf616a;
 @define-color success #a3be8c;
 @define-color warn #ebcb8b;
 @define-color info #81a1c1;
+
+@define-color selected_bg #4c566a;
+@define-color selected_fg #eceff4;
+
+@define-color input_bg #eceff4;
+@define-color input_fg #2e3440;
 
 * {
   font-family: "Roboto", "FontAwesome";
@@ -22,7 +27,7 @@ window > * {
 
 #input {
   background-color: @input_bg;
-  color: @bg !important;
+  color: @input_fg;
   border: none;
   border-radius: 1.5rem;
   padding: 0.25rem 1rem;
@@ -41,11 +46,15 @@ window > * {
 }
 
 #entry:selected {
-  background-color: @info;
+  background-color: @selected_bg;
 }
 
 #text {
   color: @fg;
+}
+
+#text:selected {
+  color: @selected_fg;
 }
 
 expander list {
