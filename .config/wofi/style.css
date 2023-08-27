@@ -1,5 +1,5 @@
 @define-color bg #dadcdc;
-@define-color fg #252323;
+@define-color fg #2E282A;
 @define-color danger #E94F37;
 @define-color success #44BBA4;
 @define-color info #3F88C5;
@@ -8,7 +8,7 @@
 @define-color selected_fg #ffffff;
 
 @define-color input_bg #ffffff;
-@define-color input_fg #252323;
+@define-color input_fg #2E282A;
 
 * {
   font-family: "Roboto", "FontAwesome";

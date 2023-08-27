@@ -27,9 +27,9 @@ title_align center
 default_border normal
 default_floating_border normal
 
-client.focused #252323 #252323 #ffffff #252323
-client.focused_inactive #252323 #252323 #ffffff
-client.unfocused #252323 #252323 #ffffff
+client.focused #2E282A #2E282A #ffffff #2E282A
+client.focused_inactive #2E282A #2E282A #ffffff
+client.unfocused #2E282A #2E282A #ffffff
 client.urgent #E94F37 #E94F37 #ffffff
 
 ### Startup
