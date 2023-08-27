@@ -1,9 +1,8 @@
-@define-color bg #d8dee9;
-@define-color fg #2e3440;
-@define-color danger #bf616a;
-@define-color success #a3be8c;
-@define-color warn #ebcb8b;
-@define-color info #81a1c1;
+@define-color bg #252323;
+@define-color fg #ffffff;
+@define-color danger #E94F37;
+@define-color success #44BBA4;
+@define-color info #3F88C5;
 
 * {
   font-family: "Roboto", "FontAwesome";

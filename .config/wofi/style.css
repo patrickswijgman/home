@@ -1,15 +1,14 @@
-@define-color bg #d8dee9;
-@define-color fg #2e3440;
-@define-color danger #bf616a;
-@define-color success #a3be8c;
-@define-color warn #ebcb8b;
-@define-color info #81a1c1;
+@define-color bg #dadcdc;
+@define-color fg #252323;
+@define-color danger #E94F37;
+@define-color success #44BBA4;
+@define-color info #3F88C5;
 
-@define-color selected_bg #4c566a;
-@define-color selected_fg #eceff4;
+@define-color selected_bg #3F88C5;
+@define-color selected_fg #ffffff;
 
-@define-color input_bg #eceff4;
-@define-color input_fg #2e3440;
+@define-color input_bg #ffffff;
+@define-color input_fg #252323;
 
 * {
   font-family: "Roboto", "FontAwesome";

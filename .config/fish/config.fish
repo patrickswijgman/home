@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 set theme_powerline_fonts yes
-set theme_color_scheme nord
+set theme_color_scheme base16-light
 
 abbr --add ga 'git add .'
 abbr --add gm 'git commit -m'
