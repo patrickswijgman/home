@@ -30,7 +30,7 @@ default_floating_border normal
 client.focused #252323 #252323 #ffffff #252323
 client.focused_inactive #252323 #252323 #ffffff
 client.unfocused #252323 #252323 #ffffff
-client.urgent #DB4C40 #DB4C40 #ffffff
+client.urgent #E94F37 #E94F37 #ffffff
 
 ### Startup
 
