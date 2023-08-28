@@ -49,10 +49,6 @@ window#waybar.hidden {
   padding: 0 1rem;
 }
 
-#battery.charging {
-  background-color: @success;
-}
-
 @keyframes blink {
   to {
     background-color: @fg;
