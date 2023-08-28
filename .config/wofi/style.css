@@ -1,11 +1,11 @@
-@define-color bg #EAEAEA;
+@define-color bg #EDF2F4;
 @define-color fg #2E282A;
 @define-color danger #E94F37;
-@define-color success #44BBA4;
-@define-color warn #F9A03F;
+@define-color success #4F9D69;
+@define-color warn #FBAF00;
 @define-color info #3F88C5;
 
-@define-color selected_bg #2E282A;
+@define-color selected_bg #3F88C5;
 @define-color selected_fg #ffffff;
 
 @define-color input_bg #ffffff;
