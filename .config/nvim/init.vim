@@ -2,7 +2,7 @@ call plug#begin()
 
 Plug 'sainnhe/everforest'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
@@ -15,6 +15,8 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 50
+
+let g:mapleader = "\<Space>"
 
 colorscheme everforest
 
@@ -48,44 +50,54 @@ set updatetime=300
 
 set termguicolors
 
-nnoremap <leader>ev :split $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<bar>:nohl<CR>
-
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-nnoremap <leader>ef :NERDTreeFind<CR>
-nnoremap <leader>cc <Plug>NERDCommenterToggle<CR>
-vnoremap <leader>cc <Plug>NERDCommenterToggle<CR>
-
-nnoremap <leader>or :call CocActionAsync('runCommand', 'editor.action.organizeImport')<CR>
+" Leader key mappings
+nnoremap <silent> <leader>ev :split $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<bar>:nohl<bar>:echo "Sourced vim config"<CR>
 nnoremap <leader>a  <Plug>(coc-codeaction-selected)
 vnoremap <leader>a  <Plug>(coc-codeaction-selected)
 nnoremap <leader>ac <Plug>(coc-codeaction-cursor)
 nnoremap <leader>as <Plug>(coc-codeaction-source)
-nnoremap <leader>qf <Plug>(coc-fix-current)
 nnoremap <leader>re <Plug>(coc-codeaction-refactor)
 nnoremap <leader>r  <Plug>(coc-codeaction-refactor-selected)
 vnoremap <leader>r  <Plug>(coc-codeaction-refactor-selected)
 nnoremap <leader>rn <Plug>(coc-rename)
+nnoremap <silent> <leader>or :call CocActionAsync('runCommand', 'editor.action.organizeImport')<CR>
+nnoremap <leader>gl :Telescope git_commits<CR>
+nnoremap <leader>gc :Telescope git_bcommits<CR>
+nnoremap <leader>gb :Telescope git_branches<CR>
+nnoremap <leader>gs :Telescope git_status<CR>
+
+" Control key mappings
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-q> <C-w>q
+nnoremap <silent> <C-n> :nohl<CR>
+nnoremap <silent> <C-p> :Telescope find_files<CR>
+nnoremap <silent> <C-f> :Telescope live_grep<CR>
+nnoremap <silent> <C-g> :Telescope grep_string<CR>
+nnoremap <silent> <C-b> :Telescope buffers<CR>
+nnoremap <silent> <C-s> :Telescope search_history<CR>
+nnoremap <silent> <C-t> :Telescope treesitter<CR>
+nnoremap <silent> <C-e> :NERDTreeFocus<CR>
+nnoremap <silent> <C-y> :NERDTreeFind<CR>
+nnoremap <C-/> <Plug>NERDCommenterToggle
+inoremap <expr> <C-space> coc#refresh()
+nnoremap <silent> <C-S-p> :CocCommand<CR>
+
+" Other mappings
 nnoremap gd <Plug>(coc-definition)
 nnoremap gy <Plug>(coc-type-definition)
 nnoremap gi <Plug>(coc-implementation)
 nnoremap gr <Plug>(coc-references)
-nnoremap gh :call CocActionAsync('doHover')<CR>
+nnoremap <silent> gh :call CocActionAsync('doHover')<CR>
 nnoremap [g <Plug>(coc-diagnostic-prev)
 nnoremap ]g <Plug>(coc-diagnostic-next)
-
-inoremap <expr> <C-space> coc#refresh()
-
-nnoremap <C-n> :nohl<CR>
 
 map q <Nop>
 
 execute "luafile ~/.config/nvim/treesitter-config.lua"
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 autocmd BufEnter *.env* :setlocal filetype=properties
+
