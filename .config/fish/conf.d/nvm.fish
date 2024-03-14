@@ -13,5 +13,8 @@ function set_nvm --on-event fish_prompt
     if test -e '.nvmrc'
         # if we find .nvmrc, run nvm use
         nvm use
+    else
+        # if there is no .nvmrc, run nvm use default silently
+        nvm use --silent default
     end
 end

@@ -51,16 +51,6 @@ set updatetime=300
 set termguicolors
 
 " Leader key mappings
-nnoremap <silent> <leader>ev :split $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :source $MYVIMRC<bar>:nohl<bar>:echo "Sourced vim config"<CR>
-nnoremap <leader>a  <Plug>(coc-codeaction-selected)
-vnoremap <leader>a  <Plug>(coc-codeaction-selected)
-nnoremap <leader>ac <Plug>(coc-codeaction-cursor)
-nnoremap <leader>as <Plug>(coc-codeaction-source)
-nnoremap <leader>re <Plug>(coc-codeaction-refactor)
-nnoremap <leader>r  <Plug>(coc-codeaction-refactor-selected)
-vnoremap <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <silent> <leader>or :call CocActionAsync('runCommand', 'editor.action.organizeImport')<CR>
 nnoremap <leader>gl :Telescope git_commits<CR>
 nnoremap <leader>gc :Telescope git_bcommits<CR>
@@ -74,17 +64,22 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-q> <C-w>q
 nnoremap <silent> <C-n> :nohl<CR>
-nnoremap <silent> <C-p> :Telescope find_files<CR>
-nnoremap <silent> <C-f> :Telescope live_grep<CR>
-nnoremap <silent> <C-g> :Telescope grep_string<CR>
+nnoremap <silent> <C-p> :Telescope find_files hidden=true<CR>
+nnoremap <silent> <C-f> :Telescope live_grep hidden=true<CR>
+nnoremap <silent> <C-g> :Telescope grep_string hidden=true<CR>
 nnoremap <silent> <C-b> :Telescope buffers<CR>
 nnoremap <silent> <C-s> :Telescope search_history<CR>
 nnoremap <silent> <C-t> :Telescope treesitter<CR>
 nnoremap <silent> <C-e> :NERDTreeFocus<CR>
-nnoremap <silent> <C-y> :NERDTreeFind<CR>
 nnoremap <C-/> <Plug>NERDCommenterToggle
+vnoremap <C-/> <Plug>NERDCommenterToggle
+nnoremap <C-.> <Plug>(coc-codeaction-cursor)
 inoremap <expr> <C-space> coc#refresh()
 nnoremap <silent> <C-S-p> :CocCommand<CR>
+nnoremap <silent> <C-S-e> :NERDTreeFind<CR>
+
+" Function key mappings
+nnoremap <F2> <Plug>(coc-rename)
 
 " Other mappings
 nnoremap gd <Plug>(coc-definition)
@@ -97,7 +92,8 @@ nnoremap ]g <Plug>(coc-diagnostic-next)
 
 map q <Nop>
 
-execute "luafile ~/.config/nvim/treesitter-config.lua"
+execute "luafile ~/.config/nvim/telescope.lua"
+execute "luafile ~/.config/nvim/treesitter.lua"
 
 autocmd BufEnter *.env* :setlocal filetype=properties
 
