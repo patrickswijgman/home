@@ -49,7 +49,7 @@ input "type:pointer" {
 ### Key bindings
 
 # Start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec foot
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -166,9 +166,7 @@ bindsym $mod+minus scratchpad show
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%d-%m-%Y %H:%M %p'; do sleep 1; done
+    status_command i3status
 
     colors {
         statusline #ffffff
