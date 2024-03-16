@@ -31,6 +31,7 @@
     "easings",
     "entrypoint",
     "esbuild",
+    "essid",
     "fixeddestination",
     "frontends",
     "gameplay",
@@ -49,12 +50,14 @@
     "nohl",
     "noselect",
     "openapi",
+    "pavucontrol",
     "phoneaccount",
     "phoneaccounts",
     "phonenumber",
     "pixelmix",
     "popout",
     "preact",
+    "pulseaudio",
     "regseconds",
     "regserver",
     "resclient",
@@ -81,7 +84,10 @@
     "voipaccounts",
     "voipgrid",
     "voys",
+    "waybar",
     "wearespindle",
-    "webphone"
+    "webphone",
+    "wifi",
+    "wireplumber"
   ]
 }

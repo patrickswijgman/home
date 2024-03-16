@@ -23,8 +23,8 @@ vim.keymap.set("n", "[g", '<Plug>(coc-diagnostic-prev)')
 vim.keymap.set("n", "]g", '<Plug>(coc-diagnostic-next)')
 vim.keymap.set("n", "gd", '<Plug>(coc-definition)')
 vim.keymap.set("n", "gr", '<Plug>(coc-references)')
-vim.keymap.set("n", "gh", function() vim.fn.CocActionAsync('doHover') end)
-vim.keymap.set("n", "<leader>or", function() vim.fn.CocActionAsync('runCommand', 'editor.action.organizeImport') end)
+vim.keymap.set("n", "gh", function() vim.fn.CocActionAsync('doHover') end, { silent = true })
+vim.keymap.set("n", "<leader>or", function() vim.fn.CocActionAsync('runCommand', 'editor.action.organizeImport') end, { silent = true })
 vim.keymap.set("i", "<C-space>", 'coc#refresh()', { expr = true })
 
 -- NERDTree

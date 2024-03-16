@@ -17,7 +17,7 @@ hide_edge_borders both
 
 ### Startup
 
-exec_always kanshi
+exec kanshi
 exec mako
 exec blueman-applet
 exec nm-applet --indicator
@@ -67,6 +67,12 @@ bindsym $mod+Shift+s exec grimshot copy area
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
+
+# Reload the bar
+bindsym $mod+Shift+b exec killall -SIGUSR2 waybar
+
+# Reload the monitor configuration
+bindsym $mod+Shift+m exec kanshi
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -163,16 +169,18 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+# bar {
+#     position top
 
-    status_command i3status
+#     status_command i3status
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
+
+bar swaybar_command waybar
 
 include /etc/sway/config.d/*
