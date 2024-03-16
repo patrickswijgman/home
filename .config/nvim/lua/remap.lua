@@ -28,7 +28,8 @@ vim.keymap.set("n", "<leader>or", function() vim.fn.CocActionAsync('runCommand',
 vim.keymap.set("i", "<C-space>", 'coc#refresh()', { expr = true })
 
 -- NERDTree
-vim.keymap.set("n", "<C-e>", vim.cmd.NERDTreeExplore)
+vim.keymap.set("n", "<C-e>", vim.cmd.NERDTreeFind)
+vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeExplore)
 
 -- NERDCommenter
 vim.keymap.set({"n", "v"}, "<C-/>", '<Plug>NERDCommenterToggle')
