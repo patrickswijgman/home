@@ -10,21 +10,16 @@ button {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-  background: inherit;
-  box-shadow: unset;
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: none; /* Remove predefined background color (white) */
+  transition: none; /* Disable predefined animations */
 }
 
 #workspaces button {
   padding: 0.125rem 0.5rem;
   color: #ffffff;
   border: 1px solid transparent;
-}
-
-#workspaces button:hover {
-  box-shadow: none; /* Remove predefined box-shadow */
-  text-shadow: none; /* Remove predefined text-shadow */
-  background: none; /* Remove predefined background color (white) */
-  transition: none; /* Disable predefined animations */
 }
 
 #workspaces button.focused {
@@ -35,12 +30,6 @@ button:hover {
 #workspaces button.urgent {
   background-color: #900000;
   border-color: #2f343a;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-  font-family: monospace, FontAwesome;
 }
 
 .modules-right > widget > * {
