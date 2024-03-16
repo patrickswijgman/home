@@ -1,13 +1,6 @@
-* {
-  /* `fonts-font-awesome` is required to be installed for icons */
-  font-family: monospace, FontAwesome;
-}
-
 window#waybar {
   background-color: #323232;
   color: #ffffff;
-  transition-property: background-color;
-  transition-duration: 0.5s;
 }
 
 button {
@@ -28,7 +21,10 @@ button:hover {
 }
 
 #workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: none; /* Remove predefined background color (white) */
+  transition: none; /* Disable predefined animations */
 }
 
 #workspaces button.focused {
@@ -39,6 +35,12 @@ button:hover {
 #workspaces button.urgent {
   background-color: #900000;
   border-color: #2f343a;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  font-family: monospace, FontAwesome;
 }
 
 .modules-right > widget > * {
