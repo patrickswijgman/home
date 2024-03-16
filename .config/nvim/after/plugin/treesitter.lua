@@ -9,6 +9,7 @@ require('nvim-treesitter.configs').setup({
     "json", 
     "jsonc",
     "yaml",
+    "toml",
     "javascript", 
     "typescript", 
     "tsx", 

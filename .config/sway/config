@@ -47,7 +47,7 @@ input "type:pointer" {
 ### Key bindings
 
 # Start a terminal
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec alacritty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
