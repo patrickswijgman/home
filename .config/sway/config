@@ -15,11 +15,6 @@ include /etc/sway/config-vars.d/*
 
 hide_edge_borders both
 
-# client.focused #ffffff7f #64727d #ffffff #ffffff7f
-# client.focused_inactive #64727d7f #64727d7f #ffffff7f
-# client.unfocused #64727d7f #64727d7f #ffffff7f
-# client.urgent #ffffff7f #eb4d4b #ffffff
-
 ### Startup
 
 exec kanshi

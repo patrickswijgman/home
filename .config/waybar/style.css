@@ -37,7 +37,8 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: #900000;
+  border-color: #2f343a;
 }
 
 .modules-right > widget > * {
@@ -55,12 +56,6 @@ button:hover {
   margin-right: 0;
 }
 
-#battery.charging,
-#battery.plugged {
-  color: #ffffff;
-  background-color: #26a65b;
-}
-
 @keyframes blink {
   to {
     background-color: #ffffff;
@@ -70,7 +65,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #eb4d4b;
+  background-color: #900000;
   color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -80,15 +75,15 @@ button:hover {
 }
 
 #network.disconnected {
-  background-color: #eb4d4b;
+  background-color: #900000;
 }
 
 #pulseaudio.muted {
-  background-color: #eb4d4b;
+  background-color: #900000;
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  background-color: #900000;
 }
 
 #tray > .passive {
@@ -97,7 +92,7 @@ button:hover {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+  background-color: #900000;
 }
 
 #idle_inhibitor.activated {
