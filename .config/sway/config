@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-bindsym $mod+d exec dmenu_path | dmenu -b | xargs swaymsg exec --
+bindsym $mod+d exec dmenu_path | fuzzel --dmenu | xargs swaymsg exec --
 
 # Manually lock the screen
 bindsym $mod+Ctrl+l exec swaylock
@@ -65,9 +65,6 @@ bindsym $mod+Shift+s exec grimshot copy area
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
-
-# Reload the bar
-bindsym $mod+Shift+b exec killall -SIGUSR2 waybar
 
 # Reload the monitor configuration
 bindsym $mod+Shift+m exec kanshi
@@ -167,7 +164,13 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bar {
-  swaybar_command waybar
+    position top
+    status_command i3status 
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
 
 include /etc/sway/config.d/*
