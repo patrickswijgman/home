@@ -43,3 +43,7 @@ Update your package list and install the Firefox .deb package:
 ```
 sudo apt-get update && sudo apt-get install firefox
 ```
+
+## Color palette
+
+https://github.com/sainnhe/everforest/blob/master/palette.md

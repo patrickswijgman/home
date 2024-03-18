@@ -26,8 +26,6 @@ abbr --add dcr 'docker compose run --rm'
 
 alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 
-fish_add_path --path $HOME/.local/bin
 fish_add_path --path $HOME/.cargo/bin
 fish_add_path --path /usr/local/go/bin
-fish_add_path --path /opt/nvim-linux64/bin
 

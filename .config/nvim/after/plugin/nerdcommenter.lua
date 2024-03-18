@@ -1,5 +1,5 @@
 -- Create default mappings
-vim.g.NERDCreateDefaultMappings = false
+vim.g.NERDCreateDefaultMappings = true
 
 -- Add spaces after comment delimiters by default
 vim.g.NERDSpaceDelims = true

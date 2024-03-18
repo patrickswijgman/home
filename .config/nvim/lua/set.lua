@@ -1,3 +1,6 @@
+-- disable the mouse
+vim.opt.mouse = ""
+
 -- spot the cursor more easily by highlighting the current line
 vim.opt.cursorline = true
 
@@ -7,8 +10,8 @@ vim.opt.colorcolumn = "120"
 -- show line numbers
 vim.opt.number = true
 
--- cursor scroll offset
-vim.opt.scrolloff = 8
+-- make sure the cursor stays in the center of the screen when scrolling
+vim.opt.scrolloff = 9999
 
 -- enable the sign column on the left to show things like warning and errors symbols
 vim.opt.signcolumn = "yes"
@@ -42,5 +45,3 @@ vim.opt.updatetime = 50
 -- enable 24-bit RGB colors, requires compatible terminal
 vim.opt.termguicolors = true
 
--- change the syntax color scheme
-vim.cmd.colorscheme("everforest")

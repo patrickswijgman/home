@@ -11,10 +11,6 @@ set $right l
 
 include /etc/sway/config-vars.d/*
 
-### Appearance
-
-hide_edge_borders both
-
 ### Startup
 
 exec kanshi
@@ -124,14 +120,21 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
-# Screen backlight keybindings
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym $mod+equal exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym $mod+minus exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 
 # Media keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+bracketright exec playerctl next
+bindsym $mod+bracketleft exec playerctl previous
+
+# Screen backlight keybindings
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
@@ -157,20 +160,44 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+# bindsym $mod+minus scratchpad show
+
+### Appearance
+
+hide_edge_borders both
+
+set $bg #2D353B
+set $fg #D3C6AA
+set $focused_bg #343F44
+set $focused_fg $fg
+set $focused_border $focused_bg
+set $inactive_bg #232A2E
+set $inactive_fg $fg
+set $inactive_border $inactive_bg
+set $urgent_bg #E67E80
+set $urgent_fg $bg
+set $urgent_border $urgent_bg
+
+client.focused $focused_border $focused_bg $focused_fg $focused_border
+client.focused_inactive $inactive_border $inactive_bg $inactive_fg
+client.unfocused $inactive_border $inactive_bg $inactive_fg
+client.urgent $urgent_border $urgent_bg $urgent_fg
 
 bar {
-    position top
-    status_command i3status 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+  position top
+  status_command i3status 
+  colors {
+    statusline $fg
+    background $bg
+    focused_workspace $focused_border $focused_bg $focused_fg
+    active_workspace $inactive_border $inactive_bg $inactive_fg
+    inactive_workspace $inactive_border $inactive_bg $inactive_fg
+    urgent_workspace $urgent_border $urgent_bg $urgent_fg
+  }
 }
 
 include /etc/sway/config.d/*

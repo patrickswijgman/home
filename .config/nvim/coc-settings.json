@@ -8,6 +8,7 @@
   "prettier.printWidth": 120,
   "prettier.quoteProps": "consistent",
   "workspace.ignoredFolders": ["$HOME", "$HOME/.cargo/**", "$HOME/.rustup/**"],
+  "cSpell.language": "en",
   "cSpell.userWords": [
     "Devhouse",
     "GOCACHE",

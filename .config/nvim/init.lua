@@ -1,3 +1,5 @@
-require("plugins");
-require("remap");
+require("leader");
 require("set");
+require("plugins");
+require("colorscheme");
+require("remap");
