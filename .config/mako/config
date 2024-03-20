@@ -1,7 +1,4 @@
 anchor=top-center
-background-color=#3A515DFF
-border-color=#3A515DFF
-text-color=#D3C6AAFF
-width=400
-height=200
-padding=10
+background-color=#76ABAEFF
+border-color=#76ABAEFF
+text-color=#FFFFFFFF

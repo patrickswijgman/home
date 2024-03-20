@@ -1,5 +1,6 @@
-require("leader");
-require("set");
-require("plugins");
-require("colorscheme");
-require("remap");
+require("setup/lazy")
+require("leader")
+require("plugins")
+require("remap")
+require("set")
+require("filetypes")

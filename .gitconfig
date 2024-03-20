@@ -1,0 +1,5 @@
+[pull]
+	rebase = true
+[user]
+	name = Patrick
+	email = patrick.swijgman@wearespindle.com

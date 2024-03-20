@@ -12,3 +12,4 @@ vim.g.NERDTreeMinimalUI = true
 
 -- Tells the NERDTree to automatically remove a buffer when a file is being deleted or renamed via a context menu command.
 vim.g.NERDTreeAutoDeleteBuffer = true
+

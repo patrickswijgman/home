@@ -1,15 +1,32 @@
-local Plug = vim.fn['plug#']
+require("lazy").setup({
+  { 'sainnhe/everforest', priority = 1000 },
+  { 'nvim-lua/plenary.nvim' },
+  { 'nvim-telescope/telescope.nvim', branch = '0.1.x' },
+  { 'preservim/nerdtree', lazy = true, cmd = { "NERDTreeFind", "NERDTreeExplore" } },
+  { 'preservim/nerdcommenter', keys = { "<leader>c<space>" } },
+  { 'tpope/vim-fugitive' },
+  { 'neoclide/coc.nvim', branch = 'release' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'NvChad/nvim-colorizer.lua' },
+},
+{
+  ui = {
+    icons = {
+      cmd = "",
+      config = "",
+      event = "",
+      ft = "",
+      init = "",
+      keys = "",
+      plugin = "",
+      runtime = "",
+      require = "",
+      source = "",
+      start = "",
+      task = "",
+      lazy = "",
+    },
+  },
+})
 
-vim.call('plug#begin')
-
-Plug('sainnhe/everforest')
-Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
-Plug('preservim/nerdtree')
-Plug('preservim/nerdcommenter')
-Plug('tpope/vim-fugitive')
-Plug('neoclide/coc.nvim', { branch = 'release' })
-Plug('nvim-treesitter/nvim-treesitter')
-Plug('NvChad/nvim-colorizer.lua')
-
-vim.call('plug#end')
+vim.cmd.colorscheme('everforest');

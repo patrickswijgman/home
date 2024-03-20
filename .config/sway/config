@@ -9,11 +9,23 @@ set $down j
 set $up k
 set $right l
 
+set $bg #222831
+set $fg #EEEEEE
+set $focused_bg #31363F
+set $focused_fg $fg
+set $focused_border $focused_bg
+set $inactive_bg #222831
+set $inactive_fg $fg
+set $inactive_border $inactive_bg
+set $urgent_bg #76ABAE
+set $urgent_fg $fg
+set $urgent_border $urgent_bg
+
 include /etc/sway/config-vars.d/*
 
 ### Startup
 
-exec kanshi
+exec_always kanshi
 exec mako
 exec blueman-applet
 exec nm-applet --indicator
@@ -21,15 +33,15 @@ exec nm-applet --indicator
 ### Idle configuration
 
 exec swayidle -w \
+  timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
   timeout 180 'swaylock' \
-  timeout 240 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
   before-sleep 'swaylock'
 
 ### Output configuration
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output * background #232A2E solid_color
+output * background $bg solid_color
 
 ### Input configuration
 #
@@ -63,9 +75,6 @@ bindsym $mod+Shift+s exec grimshot copy area
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
-
-# Reload the monitor configuration
-bindsym $mod+Shift+m exec kanshi
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -171,18 +180,6 @@ bindsym $mod+a focus parent
 ### Appearance
 
 hide_edge_borders both
-
-set $bg #2D353B
-set $fg #D3C6AA
-set $focused_bg #343F44
-set $focused_fg $fg
-set $focused_border $focused_bg
-set $inactive_bg #232A2E
-set $inactive_fg $fg
-set $inactive_border $inactive_bg
-set $urgent_bg #E67E80
-set $urgent_fg $bg
-set $urgent_border $urgent_bg
 
 client.focused $focused_border $focused_bg $focused_fg $focused_border
 client.focused_inactive $inactive_border $inactive_bg $inactive_fg

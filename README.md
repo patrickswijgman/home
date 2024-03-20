@@ -46,4 +46,4 @@ sudo apt-get update && sudo apt-get install firefox
 
 ## Color palette
 
-https://github.com/sainnhe/everforest/blob/master/palette.md
+https://colorhunt.co/palette/22283131363f76abaeeeeeee
