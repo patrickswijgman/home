@@ -1,4 +1,4 @@
-local telescope = require('telescope.builtin')
+local telescope = require("telescope.builtin")
 
 
 -- Telescope
@@ -15,7 +15,7 @@ vim.keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)")
 vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)")
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)")
 vim.keymap.set("n", "gr", "<Plug>(coc-references)")
-vim.keymap.set("n", "gh", function() vim.fn.CocActionAsync('doHover') end, { silent = true })
+vim.keymap.set("n", "gh", function() vim.fn.CocActionAsync("doHover") end, { silent = true })
 vim.keymap.set("n", "<C-j>", "coc#float#has_scroll() ? coc#float#scroll(1, 1) : '<C-j>'", { expr = true })
 vim.keymap.set("n", "<C-k>", "coc#float#has_scroll() ? coc#float#scroll(0, 1) : '<C-k>'", { expr = true })
 

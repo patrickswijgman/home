@@ -1,15 +1,14 @@
-use chrono::{DateTime, Local};
 use std::io::{self, Write};
 use std::thread;
 use std::time::Duration;
-use sys_info::{self};
 
 fn main() {
     if let Ok(manager) = battery::Manager::new() {
         loop {
+            // Add all the components into one formatted string
             let status = format!("{} | {} | {}", memory(), battery(&manager), clock());
 
-            // Print the status to STDOUT
+            // Print the status to stdout
             println!("{}", status);
 
             // Flush stdout to ensure the status is immediately visible
@@ -21,8 +20,8 @@ fn main() {
     }
 }
 
-fn clock() -> DateTime<Local> {
-    return Local::now();
+fn clock() -> String {
+    return chrono::Local::now().format("%a %e %b %H:%M:%S").to_string();
 }
 
 fn battery(manager: &battery::Manager) -> String {
