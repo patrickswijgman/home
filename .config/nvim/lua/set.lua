@@ -31,6 +31,9 @@ vim.opt.autoindent = true
 -- use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- undo file
+vim.opt.undofile = true
+
 -- disable swap file, it's annoying
 vim.opt.swapfile = false
 vim.opt.backup = false
