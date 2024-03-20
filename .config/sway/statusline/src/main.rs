@@ -3,44 +3,56 @@ use std::thread;
 use std::time::Duration;
 
 fn main() {
-    if let Ok(manager) = battery::Manager::new() {
-        loop {
-            // Add all the components into one formatted string
-            let status = format!("{} | {} | {}", memory(), battery(&manager), clock());
+    let mut system_info = sysinfo::System::new();
+    let battery_info = battery::Manager::new().unwrap();
 
-            // Print the status to stdout
-            println!("{}", status);
+    loop {
+        system_info.refresh_memory();
+        system_info.refresh_cpu();
 
-            // Flush stdout to ensure the status is immediately visible
-            io::stdout().flush().unwrap();
+        // Add all the components into one formatted string
+        let status = format!(
+            "{} | {} | {} | {}",
+            cpu(&system_info),
+            memory(&system_info),
+            battery(&battery_info),
+            clock()
+        );
 
-            // Sleep for some time before updating the status again
-            thread::sleep(Duration::from_secs(1));
-        }
+        // Print the status to stdout
+        println!("{}", status);
+
+        // Flush stdout to ensure the status is immediately visible
+        io::stdout().flush().unwrap();
+
+        // Sleep for some time before updating the status again
+        thread::sleep(Duration::from_secs(1));
     }
 }
 
 fn clock() -> String {
-    return chrono::Local::now().format("%a %e %b %H:%M:%S").to_string();
+    let now = chrono::Local::now().format("%a %e %b %H:%M:%S").to_string();
+    return format!(" {}", now);
 }
 
 fn battery(manager: &battery::Manager) -> String {
     if let Ok(mut batteries) = manager.batteries() {
         if let Some(Ok(battery)) = batteries.next() {
             let percentage = battery.state_of_charge().value * 100.0;
-            return format!("BAT: {}%", percentage.floor());
+            return format!(" {}%", percentage.floor());
         }
     }
 
     return String::from("-");
 }
 
-fn memory() -> String {
-    if let Ok(memory) = sys_info::mem_info() {
-        let total = memory.total / 1000_000;
-        let in_use = (memory.total - memory.avail) as f32 / 1000_000.0;
-        return format!("MEM: {:.2} / {} GB", in_use, total);
-    }
+fn memory(system: &sysinfo::System) -> String {
+    let total = system.total_memory() / 1000_000_000;
+    let used = system.used_memory() as f64 / 1000_000_000.0;
+    return format!(" {:.2} / {} GB", used, total);
+}
 
-    return String::from("-");
+fn cpu(system: &sysinfo::System) -> String {
+    let total: f32 = system.cpus().iter().map(|cpu| cpu.cpu_usage()).sum();
+    return format!(" {:.2}%", total);
 }
