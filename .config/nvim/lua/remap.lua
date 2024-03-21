@@ -1,6 +1,5 @@
 local telescope = require("telescope.builtin")
 
-
 -- Telescope
 vim.keymap.set("n", "<C-p>", function() telescope.find_files({ hidden = true }) end)
 vim.keymap.set("n", "<C-f>", function() telescope.live_grep({ hidden = true }) end)
@@ -24,7 +23,7 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 -- NERDTree
 vim.keymap.set("n", "<C-e>", vim.cmd.NERDTreeFind)
-vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeExplore)
+vim.keymap.set("n", "<leader>e", vim.cmd.NERDTree)
 
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")

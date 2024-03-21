@@ -31,7 +31,7 @@ vim.opt.autoindent = true
 -- use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- undo file
+-- keep undos between neovim sessions, in case I accidentally close the editor for example
 vim.opt.undofile = true
 
 -- disable swap file, it's annoying

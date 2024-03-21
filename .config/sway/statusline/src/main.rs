@@ -23,7 +23,9 @@ fn main() {
         println!("{}", status);
 
         // Flush stdout to ensure the status is immediately visible
-        io::stdout().flush().unwrap();
+        if let Err(err) = io::stdout().flush() {
+            println!("Error during stdout flush: {}", err)
+        }
 
         // Sleep for some time before updating the status again
         thread::sleep(Duration::from_secs(1));
@@ -31,8 +33,10 @@ fn main() {
 }
 
 fn clock() -> String {
-    let now = chrono::Local::now().format("%a %e %b %H:%M:%S").to_string();
-    return format!(" {}", now);
+    let now = chrono::Local::now();
+    let date = now.format("%a %e %b").to_string();
+    let time = now.format("%H:%M:%S").to_string();
+    return format!(" {} |  {}", date, time);
 }
 
 fn battery(manager: &battery::Manager) -> String {
@@ -47,8 +51,8 @@ fn battery(manager: &battery::Manager) -> String {
 }
 
 fn memory(system: &sysinfo::System) -> String {
-    let total = system.total_memory() / 1000_000_000;
-    let used = system.used_memory() as f64 / 1000_000_000.0;
+    let total = system.total_memory() / 1_000_000_000;
+    let used = system.used_memory() as f64 / 1_000_000_000.0;
     return format!(" {:.2} / {} GB", used, total);
 }
 
