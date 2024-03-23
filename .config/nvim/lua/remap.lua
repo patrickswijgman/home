@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 -- NERDTree
 vim.keymap.set("n", "<C-e>", vim.cmd.NERDTreeFind)
-vim.keymap.set("n", "<leader>e", vim.cmd.NERDTree)
+vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeExplore)
 
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")

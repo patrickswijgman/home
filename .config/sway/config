@@ -34,10 +34,10 @@ exec nm-applet --indicator
 
 ### Idle configuration
 
-exec swayidle -w \
-  timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-  timeout 180 'swaylock' \
-  before-sleep 'swaylock'
+# exec swayidle -w \
+#   timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#   timeout 180 'swaylock' \
+#   before-sleep 'swaylock'
 
 ### Output configuration
 #
@@ -148,6 +148,9 @@ bindsym $mod+bracketleft exec playerctl previous
 # Screen backlight keybindings
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+# Set idle inhibitor for the current view, which disables the idle configuration
+bindsym $mod+backslash inhibit_idle focus
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
