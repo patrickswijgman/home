@@ -29,8 +29,6 @@ include /etc/sway/config-vars.d/*
 
 exec_always kanshi
 exec mako
-exec blueman-applet
-exec nm-applet --indicator
 
 ### Idle configuration
 
@@ -86,22 +84,12 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # Move the focused window with the same, but add Shift
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-# Ditto, with arrow keys
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -128,13 +116,12 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # Audio keybindings
-bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
-bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
-bindsym $mod+equal exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
-bindsym $mod+minus exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym $mod+equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # Media keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -191,9 +178,12 @@ client.focused_inactive $inactive_border $inactive_bg $inactive_fg
 client.unfocused $inactive_border $inactive_bg $inactive_fg
 client.urgent $urgent_border $urgent_bg $urgent_fg
 
+font pango:monospace 10
+
 bar {
-  position top
+  position bottom
   status_command "$HOME/.config/sway/statusline/target/debug/statusline"
+  tray_output none
   colors {
     statusline $fg
     background $bg
