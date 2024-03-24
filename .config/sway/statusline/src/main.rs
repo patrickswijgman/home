@@ -19,8 +19,9 @@ fn main() {
 
         // Add all the components into one formatted string
         let status = format!(
-            "{} | {} | {} | {} | {} | {} | {}",
+            "{} | {} | {} | {} | {} | {} | {} | {}",
             components::volume::display(),
+            components::brightness::display(),
             components::battery::display(),
             components::cpu::display(&system_info),
             components::memory::display(&system_info),

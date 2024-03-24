@@ -1,4 +1,5 @@
 pub mod battery;
+pub mod brightness;
 pub mod cpu;
 pub mod date;
 pub mod memory;
