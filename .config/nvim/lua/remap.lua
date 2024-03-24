@@ -15,8 +15,8 @@ vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)")
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)")
 vim.keymap.set("n", "gr", "<Plug>(coc-references)")
 vim.keymap.set("n", "gh", function() vim.fn.CocActionAsync("doHover") end, { silent = true })
-vim.keymap.set("n", "<C-j>", "coc#float#has_scroll() ? coc#float#scroll(1, 1) : '<C-j>'", { expr = true })
-vim.keymap.set("n", "<C-k>", "coc#float#has_scroll() ? coc#float#scroll(0, 1) : '<C-k>'", { expr = true })
+vim.keymap.set("n", "<C-d>", "coc#float#has_scroll() ? coc#float#scroll(1, 1) : '<C-d>'", { expr = true })
+vim.keymap.set("n", "<C-u>", "coc#float#has_scroll() ? coc#float#scroll(0, 1) : '<C-u>'", { expr = true })
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)

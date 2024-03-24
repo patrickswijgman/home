@@ -133,8 +133,8 @@ bindsym $mod+bracketright exec playerctl next
 bindsym $mod+bracketleft exec playerctl previous
 
 # Screen backlight keybindings
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 
 # Set idle inhibitor for the current view, which disables the idle configuration
 bindsym $mod+backslash inhibit_idle focus

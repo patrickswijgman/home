@@ -5,7 +5,7 @@ pub fn display(manager: &battery::Manager) -> String {
             let state = battery.state();
             let icon = get_icon(state, charge);
             let style = get_style(charge);
-            return format!("<span {}>{} {}%</span>", style, icon, charge.floor());
+            return format!("<span {}>{} {:02.0}%</span>", style, icon, charge);
         }
     }
 
