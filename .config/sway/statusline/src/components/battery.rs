@@ -26,11 +26,8 @@ fn get_icon(state: battery::State, charge: f32) -> String {
     if charge <= 75.0 {
         return String::from("");
     }
-    if charge <= 100.0 {
-        return String::from("");
-    }
 
-    return String::from("");
+    return String::from("");
 }
 
 fn get_style(charge: f32) -> String {

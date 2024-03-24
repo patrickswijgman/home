@@ -1,7 +1,6 @@
 use std::io::{self, Write};
 use std::thread;
-use std::time::Duration;
-use std::time::Instant;
+use std::time::{Duration, Instant};
 
 mod components;
 
@@ -21,17 +20,18 @@ fn main() {
 
         // Add all the components into one formatted string
         let status = format!(
-            "{} | {} | {} | {} | {} | {}",
+            "{} | {} | {} | {} | {} | {} | {}",
             components::volume::display(),
             components::battery::display(&battery_info),
             components::cpu::display(&system_info),
             components::memory::display(&system_info),
             components::date::display(&now),
-            components::time::display(&now)
+            components::time::display(&now),
+            components::rate::display(&i),
         );
 
         // Print the status to stdout
-        println!("{} | {:02.2}ms", status, i.elapsed().as_millis());
+        println!("{}", status);
 
         // Flush stdout to ensure the status is immediately visible
         if let Err(err) = io::stdout().flush() {
