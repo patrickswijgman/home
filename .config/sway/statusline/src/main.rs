@@ -6,7 +6,6 @@ mod components;
 
 fn main() {
     let mut system_info = sysinfo::System::new();
-    let battery_info = battery::Manager::new().unwrap();
 
     loop {
         let i = Instant::now();
@@ -22,7 +21,7 @@ fn main() {
         let status = format!(
             "{} | {} | {} | {} | {} | {} | {}",
             components::volume::display(),
-            components::battery::display(&battery_info),
+            components::battery::display(),
             components::cpu::display(&system_info),
             components::memory::display(&system_info),
             components::date::display(&now),

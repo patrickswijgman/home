@@ -1,39 +1,47 @@
-pub fn display(manager: &battery::Manager) -> String {
-    if let Ok(mut batteries) = manager.batteries() {
-        if let Some(Ok(battery)) = batteries.next() {
-            let charge = battery.state_of_charge().value * 100.0;
-            let state = battery.state();
-            let icon = get_icon(state, charge);
-            let style = get_style(charge);
-            return format!("<span {}>{} {:02.0}%</span>", style, icon, charge);
-        }
-    }
+use super::utils;
 
-    return String::from("-");
+pub fn display() -> String {
+    let capacity = get_capacity();
+    let status = get_status();
+    let icon = get_icon(status, capacity);
+    let style = get_style(capacity);
+    return format!("<span {}>{} {:02.0}%</span>", style, icon, capacity);
 }
 
-fn get_icon(state: battery::State, charge: f32) -> String {
-    if state == battery::State::Charging {
+fn get_icon(status: String, capacity: i32) -> String {
+    if status == "Charging" {
         return String::from("");
     }
 
-    if charge <= 25.0 {
+    if capacity <= 25 {
         return String::from("");
     }
-    if charge <= 50.0 {
+    if capacity <= 50 {
         return String::from("");
     }
-    if charge <= 75.0 {
+    if capacity <= 75 {
         return String::from("");
     }
 
     return String::from("");
 }
 
-fn get_style(charge: f32) -> String {
-    if charge <= 20.0 {
+fn get_style(capacity: i32) -> String {
+    if capacity <= 20 {
         return String::from("color=\"red\"");
     }
 
     return String::from("");
+}
+
+fn get_capacity() -> i32 {
+    if let Ok(capacity) = utils::cmd("cat /sys/class/power_supply/BAT0/capacity").parse() {
+        return capacity;
+    }
+
+    return -1;
+}
+
+fn get_status() -> String {
+    return utils::cmd("cat /sys/class/power_supply/BAT0/status");
 }
