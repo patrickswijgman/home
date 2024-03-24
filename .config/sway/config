@@ -116,12 +116,12 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # Audio keybindings
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pamixer -t
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
 
-bindsym $mod+equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+equal exec pamixer -i 5
+bindsym $mod+minus exec pamixer -d 5
 
 # Media keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
