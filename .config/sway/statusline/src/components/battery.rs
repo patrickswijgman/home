@@ -5,7 +5,7 @@ pub fn display() -> String {
     let status = get_status();
     let icon = get_icon(status, capacity);
     let style = get_style(capacity);
-    return format!("<span {}>{} {:02.0}%</span>", style, icon, capacity);
+    return format!("<span {}>{} {:>3.0}%</span>", style, icon, capacity);
 }
 
 fn get_icon(status: String, capacity: i32) -> String {

@@ -4,7 +4,7 @@ pub fn display() -> String {
     let c = get_current();
     let m = get_max();
     let p = (c / m) * 100.0;
-    return format!(" {:.0}%", p);
+    return format!(" {:>3.0}%", p);
 }
 
 fn get_current() -> f32 {

@@ -5,7 +5,7 @@ pub fn display() -> String {
     let muted = is_muted();
     let icon = get_icon(muted, volume);
     let style = get_style(muted);
-    return format!("<span {}>{} {}%</span>", style, icon, volume);
+    return format!("<span {}>{} {:>3}%</span>", style, icon, volume);
 }
 
 fn get_icon(muted: bool, volume: i32) -> String {
