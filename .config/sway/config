@@ -29,6 +29,8 @@ include /etc/sway/config-vars.d/*
 
 exec_always kanshi
 exec mako
+exec blueman-applet
+exec nm-applet --indicator
 
 ### Idle configuration
 
@@ -68,7 +70,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_path | fuzzel --dmenu | xargs swaymsg exec --
 
 # Manually lock the screen
-bindsym $mod+Ctrl+l exec swaylock
+bindsym $mod+Ctrl+l exec swaylock && systemctl suspend
 
 # Take a screenshot
 bindsym $mod+Shift+s exec grimshot copy area

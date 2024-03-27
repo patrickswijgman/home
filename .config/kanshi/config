@@ -2,32 +2,7 @@
 
 profile {
 	output eDP-1 disable
-	output "Dell Inc. DELL U2720Q 87RFX83"
-}
-
-profile {
-	output eDP-1 disable
-	output "Dell Inc. DELL U2419HC DVJ0VS2"
-}
-
-profile {
-	output eDP-1 disable
-	output "Dell Inc. DELL S3422DWG 8BNTS63"
-}
-
-profile {
-	output eDP-1 disable
-	output "Dell Inc. DELL S3422DWG F7CTS63"
-}
-
-profile {
-	output eDP-1 disable
-	output "Dell Inc. DELL U2719D 8H81Z13"
-}
-
-profile {
-	output eDP-1 disable
-	output "Dell Inc. DELL U2715H GH85D4B60MRL"
+	output "Dell Inc. DELL U2720Q 87RFX83" scale 2
 }
 
 profile {
