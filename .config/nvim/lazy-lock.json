@@ -1,10 +1,10 @@
 {
   "coc.nvim": { "branch": "release", "commit": "183a6041c77340a641a43007492ec80b41786560" },
-  "everforest": { "branch": "master", "commit": "a0f744c5574e11f1be365fe6be41da8ac4a0ae5b" },
-  "lazy.nvim": { "branch": "main", "commit": "65887ea871d44822bff47504202b3643f29d614e" },
+  "everforest": { "branch": "master", "commit": "4d67edd8d4701b00cee37073d53053a650264541" },
+  "lazy.nvim": { "branch": "main", "commit": "e753eb602539bdad9f0709066d5893a788cb5db9" },
   "nerdtree": { "branch": "master", "commit": "f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "85855b38011114929f4058efc97af1059ab3e41d" },
-  "nvim-treesitter": { "branch": "master", "commit": "aa8d8bc600e00f84d11b9d40c6900d72d0f68fa3" },
+  "nvim-treesitter": { "branch": "master", "commit": "23ba63028c6acca29be6462c0a291fc4a1b9eae8" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
   "vim-fugitive": { "branch": "master", "commit": "2377e16e6641418565b934990cf49068855987c6" }
