@@ -30,6 +30,7 @@ vim.keymap.set("i", "<C-space>", "coc#refresh()", opts)
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gv", function() vim.cmd("Gvdiffsplit!") end)
 
 -- NERDTree
 vim.keymap.set("n", "<C-e>", vim.cmd.NERDTreeFind)

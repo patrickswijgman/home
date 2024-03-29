@@ -3,16 +3,12 @@ use super::utils;
 pub fn display() -> String {
     let volume = get_volume();
     let muted = is_muted();
-    let icon = get_icon(muted, volume);
+    let icon = get_icon(volume);
     let style = get_style(muted);
     return format!("<span {}>{} {:>3}%</span>", style, icon, volume);
 }
 
-fn get_icon(muted: bool, volume: i32) -> String {
-    if muted {
-        return String::from("");
-    }
-
+fn get_icon(volume: i32) -> String {
     if volume == 0 {
         return String::from("");
     }
@@ -25,7 +21,7 @@ fn get_icon(muted: bool, volume: i32) -> String {
 
 fn get_style(muted: bool) -> String {
     if muted {
-        return String::from("color=\"red\"");
+        return String::from("alpha=\"50%\"");
     }
 
     return String::from("");

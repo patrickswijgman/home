@@ -16,3 +16,12 @@ pub fn cmd(command: &str) -> String {
 
     return String::from("");
 }
+
+pub fn escape(str: &str) -> String {
+    return str
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("'", "&apos;")
+        .replace("\"", "&quot;");
+}
