@@ -11,18 +11,17 @@ set $right l
 
 set $bg #282828
 set $fg #ebdbb2
-set $fg_dim #928374
 set $focused_bg $bg
 set $focused_fg $fg
 set $focused_border $focused_bg
-set $inactive_bg $bg
-set $inactive_fg $fg_dim
+set $inactive_bg #1d2021
+set $inactive_fg #928374
 set $inactive_border $inactive_bg
 set $urgent_bg #cc241d
 set $urgent_fg $fg
 set $urgent_border $urgent_bg
 
-set $wallpaper_bg #282828
+set $wallpaper_bg $bg
 
 include /etc/sway/config-vars.d/*
 
