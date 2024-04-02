@@ -1,6 +1,7 @@
 require("setup/lazy")
 require("leader")
 require("plugins")
+require("colorscheme")
 require("remap")
 require("set")
 require("filetypes")
