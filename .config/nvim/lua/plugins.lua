@@ -1,7 +1,5 @@
 require("lazy").setup({
   { "sainnhe/everforest", priority = 1000 },
-  { "mhartington/oceanic-next", priority = 1000 },
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
   { "nvim-lua/plenary.nvim" },
   { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
   { "preservim/nerdtree" },
