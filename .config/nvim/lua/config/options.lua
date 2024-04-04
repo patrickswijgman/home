@@ -47,4 +47,3 @@ vim.opt.updatetime = 50
 
 -- enable 24-bit RGB colors, requires compatible terminal
 vim.opt.termguicolors = true
-

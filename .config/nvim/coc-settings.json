@@ -57,6 +57,7 @@
     "jsonb",
     "jssip",
     "kaniko",
+    "kanshi",
     "memfs",
     "msgtype",
     "nats",
