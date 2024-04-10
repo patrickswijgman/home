@@ -73,7 +73,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_path | fuzzel --dmenu | xargs swaymsg exec --
 
 # Manually lock the screen
-bindsym $mod+Ctrl+l exec systemctl suspend && swaylock
+bindsym $mod+Ctrl+l exec swaylock
 
 # Take a screenshot
 bindsym $mod+Shift+s exec grimshot copy area
