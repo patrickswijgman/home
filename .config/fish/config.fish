@@ -4,7 +4,7 @@ end
 
 set -g fish_greeting
 
-abbr --add ga 'git add .'
+abbr --add ga 'git add -u'
 abbr --add --set-cursor gm 'git commit -m "%"'
 abbr --add gma 'git commit --amend'
 abbr --add gch 'git checkout'
@@ -28,4 +28,6 @@ alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 
 fish_add_path --path $HOME/.cargo/bin
 fish_add_path --path /usr/local/go/bin
+
+fish_ssh_agent
 
