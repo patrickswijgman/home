@@ -60,6 +60,7 @@
     "gomod",
     "gorm",
     "healthcheck",
+    "helptext",
     "hitbox",
     "holodeck",
     "ipaddr",

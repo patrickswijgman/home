@@ -9,11 +9,11 @@ set $down j
 set $up k
 set $right l
 
-set $bg #222831
-set $fg #EEEEEE
-set $dim #777777
-set $urgent #76ABAE
-set $wallpaper #31363F
+set $bg #202030
+set $fg #FCFAFA
+set $dim #808080
+set $urgent #AF7A6D
+set $wallpaper $bg
 
 set $focused_bg $bg
 set $focused_fg $fg
@@ -191,11 +191,11 @@ bar {
   tray_output none
   workspace_buttons yes
   colors {
-    statusline $fg
-    background $bg
-    focused_workspace $bg $bg $fg
-    active_workspace $bg $bg $dim
-    inactive_workspace $bg $bg $dim
+    statusline $bg
+    background $fg
+    focused_workspace $fg $fg $bg
+    active_workspace $fg $fg $dim
+    inactive_workspace $fg $fg $dim
     urgent_workspace $urgent_border $urgent_bg $urgent_fg
   }
 }

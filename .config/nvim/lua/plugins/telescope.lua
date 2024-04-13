@@ -23,7 +23,10 @@ return {
     vim.keymap.set("n", "<C-p>", function() builtin.find_files({ hidden = true }) end)
     vim.keymap.set("n", "<C-b>", function() builtin.buffers() end)
     vim.keymap.set("n", "<C-f>", function()
-      builtin.grep_string({ search = vim.fn.input("Grep > "), hidden = true })
+      local input = vim.fn.input("Grep > ")
+      if input then
+        builtin.grep_string({ search = input, hidden = true })
+      end
     end)
   end
 }
