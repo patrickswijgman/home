@@ -12,8 +12,8 @@ set $right l
 set $bg #202030
 set $fg #FCFAFA
 set $dim #91818A
-set $urgent #AF7A6D
-set $wallpaper $bg
+set $urgent #E65F5CFF
+set $wallpaper #000000
 
 set $focused_bg $bg
 set $focused_fg $fg
