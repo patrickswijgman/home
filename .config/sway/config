@@ -11,7 +11,7 @@ set $right l
 
 set $bg #202030
 set $fg #FCFAFA
-set $dim #808080
+set $dim #91818A
 set $urgent #AF7A6D
 set $wallpaper $bg
 
