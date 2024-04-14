@@ -9,10 +9,10 @@ set $down j
 set $up k
 set $right l
 
-set $bg #202030
-set $fg #FCFAFA
-set $dim #91818A
-set $urgent #E65F5CFF
+set $bg #000000
+set $fg #FFFFFF
+set $dim #7F7F7F
+set $urgent #007FFF
 set $wallpaper #000000
 
 set $focused_bg $bg
