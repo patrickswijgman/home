@@ -24,7 +24,7 @@ return {
     vim.keymap.set("n", "<C-b>", function() builtin.buffers() end)
     vim.keymap.set("n", "<C-f>", function()
       local input = vim.fn.input("Grep > ")
-      if input then
+      if string.len(input) > 0 then
         builtin.grep_string({ search = input, hidden = true })
       end
     end)

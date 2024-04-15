@@ -9,10 +9,17 @@ set $down j
 set $up k
 set $right l
 
-set $bg #000000
-set $fg #FFFFFF
-set $dim #7F7F7F
-set $urgent #007FFF
+set $bg #1e1e1e
+set $fg #ffffff
+set $dim #7f7f7f
+set $urgent #007fff
+
+set $bar_bg $bg
+set $bar_fg $fg
+set $bar_dim $dim
+set $bar_urgent_bg $urgent
+set $bar_urgent_fg $fg
+
 set $wallpaper #000000
 
 set $focused_bg $bg
@@ -183,7 +190,7 @@ client.focused_inactive $inactive_border $inactive_bg $inactive_fg
 client.unfocused $inactive_border $inactive_bg $inactive_fg
 client.urgent $urgent_border $urgent_bg $urgent_fg
 
-font pango:monospace 10
+font pango:monospace 8
 
 bar {
   position bottom
@@ -191,12 +198,12 @@ bar {
   tray_output none
   workspace_buttons yes
   colors {
-    statusline $bg
-    background $fg
-    focused_workspace $fg $fg $bg
-    active_workspace $fg $fg $dim
-    inactive_workspace $fg $fg $dim
-    urgent_workspace $urgent_border $urgent_bg $urgent_fg
+    statusline $bar_fg
+    background $bar_bg
+    focused_workspace $bar_bg $bar_bg $bar_fg
+    active_workspace $bar_bg $bar_bg $bar_dim
+    inactive_workspace $bar_bg $bar_bg $bar_dim
+    urgent_workspace $bar_urgent_bg $bar_urgent_bg $bar_urgent_fg
   }
 }
 

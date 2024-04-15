@@ -1,11 +1,10 @@
 {
-  "coc.nvim": { "branch": "release", "commit": "196d8f0314bc6199f8243f00411ca7d87adc3c30" },
-  "copilot": { "branch": "release", "commit": "f45ecd95c1474885e278f20d6ae86a6e30de2151" },
+  "copilot": { "branch": "release", "commit": "1e135c5303bc60598f6314a2276f31dc91aa34dd" },
   "lazy.nvim": { "branch": "main", "commit": "31ddbea7c10b6920c9077b66c97951ca8682d5c8" },
   "nerdcommenter": { "branch": "master", "commit": "e361a44230860d616f799a337bc58f5218ab6e9c" },
   "nerdtree": { "branch": "master", "commit": "f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "85855b38011114929f4058efc97af1059ab3e41d" },
-  "nvim-treesitter": { "branch": "master", "commit": "7e6b044be8187c4c28dffa90ad0dc623dbe243f3" },
+  "nvim-treesitter": { "branch": "master", "commit": "d2f4c7830377d6d036e9621ae696dbd28f089897" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "rose-pine": { "branch": "main", "commit": "9cd7d8aad3606a95d733a45d16275eb7a5a836a3" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },

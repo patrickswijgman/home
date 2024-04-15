@@ -12,7 +12,6 @@ return {
         RRGGBBAA = true,     -- #RRGGBBAA hex codes
         AARRGGBB = false,    -- 0xAARRGGBB hex codes
         rgb_fn = true,       -- CSS rgb() and rgba() functions
-        hsl_fn = false,      -- CSS hsl() and hsla() functions
         mode = "background", -- Set the display mode.
         tailwind = true,     -- Enable tailwind colors
         always_update = false
