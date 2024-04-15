@@ -32,7 +32,6 @@ set $urgent_bg $urgent
 set $urgent_fg $fg
 set $urgent_border $urgent_bg
 
-
 include /etc/sway/config-vars.d/*
 
 ### Startup
@@ -198,8 +197,8 @@ bar {
   tray_output none
   workspace_buttons yes
   colors {
-    statusline $bar_fg
     background $bar_bg
+    statusline $bar_fg
     focused_workspace $bar_bg $bar_bg $bar_fg
     active_workspace $bar_bg $bar_bg $bar_dim
     inactive_workspace $bar_bg $bar_bg $bar_dim
