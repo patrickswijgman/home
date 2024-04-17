@@ -47,6 +47,19 @@ return {
           }
         end,
 
+        tsserver = function()
+          lspconfig.tsserver.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            init_options = {
+              preferences = {
+                importModuleSpecifierPreference = "non-relative",
+                importModuleSpecifierEnding = "js",
+              },
+            },
+          }
+        end,
+
         lua_ls = function()
           lspconfig.lua_ls.setup {
             on_attach = on_attach,
