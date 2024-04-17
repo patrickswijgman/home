@@ -2,8 +2,8 @@
 vim.g.mapleader = " "
 
 -- buffer navigation
-vim.keymap.set("n", "<C-]>", vim.cmd.bnext)
-vim.keymap.set("n", "<C-[>", vim.cmd.bprev)
+-- vim.keymap.set("n", "<C-]>", vim.cmd.bnext)
+-- vim.keymap.set("n", "<C-[>", vim.cmd.bprev)
 
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")
