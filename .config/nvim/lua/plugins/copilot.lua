@@ -3,7 +3,7 @@ return {
 
   name = "copilot",
 
-  config = function()
-    vim.keymap.set("n", "<leader>cp", vim.cmd.Copilot)
-  end
+  keys = {
+    { "<leader>cp", vim.cmd.Copilot },
+  }
 }

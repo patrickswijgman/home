@@ -1,6 +1,14 @@
 return {
   "preservim/nerdcommenter",
 
+  cmd = {
+    "NERDCommenterToggle",
+  },
+
+  keys = {
+    { "<C-_>", "<Plug>NERDCommenterToggle", mode = { "n", "v" } },
+  },
+
   init = function()
     -- Create default mappings
     vim.g.NERDCreateDefaultMappings = 0
@@ -22,9 +30,5 @@ return {
 
     -- Enable NERDCommenterToggle to check all selected lines is commented or not
     vim.g.NERDToggleCheckAllLines = 1
-  end,
-
-  config = function()
-    vim.keymap.set({ "n", "v" }, "<C-_>", "<Plug>NERDCommenterToggle");
   end
 }

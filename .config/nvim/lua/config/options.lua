@@ -9,6 +9,7 @@ vim.opt.colorcolumn = "120"
 
 -- show line numbers
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- make sure the cursor stays in the center of the screen when scrolling
 vim.opt.scrolloff = 9999
@@ -29,9 +30,9 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 
 -- use system clipboard
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 
--- keep undos between neovim sessions, in case I accidentally close the editor for example
+-- keep undos between sessions, in case I accidentally close the editor for example
 vim.opt.undofile = true
 
 -- disable swap file, it's annoying
@@ -47,3 +48,12 @@ vim.opt.updatetime = 50
 
 -- enable 24-bit RGB colors, requires compatible terminal
 vim.opt.termguicolors = true
+
+-- spell checking
+-- ]s will go to the next misspelled word.
+-- [s will go to the previous misspelled word.
+-- zg add word to dictionary
+-- z= will open the list of suggestions for the misspelled word
+-- :spellr will apply previous applied suggestion in the whole file
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
