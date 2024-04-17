@@ -10,11 +10,12 @@ return {
 
     require "telescope".setup {
       defaults = {
-        -- configure to use ripgrep when searching for a string
+        -- configure to use ripgrep when searching with grep_string or live_grep
         vimgrep_arguments = {
           "rg",
           "--follow",        -- Follow symbolic links
           "--hidden",        -- Search for hidden files
+          "--color=never",   -- Don't use colors, Telescope can't interpret them
           "--no-heading",    -- Don't group matches by each file
           "--with-filename", -- Print the file path with the matched lines
           "--line-number",   -- Show line numbers
@@ -43,8 +44,11 @@ return {
           -- configure to use ripgrep when searching for a file
           find_command = {
             "rg",
-            "--files",
-            "--hidden",
+            "--files",       -- List all files
+            "--hidden",      -- Search for hidden files
+            "--sort=path",   -- Ascending sort by path
+            "--color=never", -- Don't use colors, Telescope can't interpret them
+            "--smart-case",  -- Smart case search
 
             -- Exclude some patterns from search
             "--glob=!**/.git/*",
@@ -62,8 +66,7 @@ return {
     local builtin = require "telescope.builtin"
 
     -- Files and searching
-    vim.keymap.set("n", "<C-e>", builtin.find_files)
-    vim.keymap.set("n", "<C-p>", builtin.git_files)
+    vim.keymap.set("n", "<C-p>", builtin.find_files)
     vim.keymap.set("n", "<C-b>", builtin.buffers)
     vim.keymap.set("n", "<C-g>", builtin.grep_string)
     vim.keymap.set("n", "<C-f>", builtin.live_grep)

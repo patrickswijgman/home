@@ -12,22 +12,45 @@ return {
 
   config = function()
     local cmp = require "cmp"
-    local lsp_capabilities = require "cmp_nvim_lsp".default_capabilities()
+    local cmp_lsp = require "cmp_nvim_lsp"
+    local lspconfig = require "lspconfig"
+    local luasnip = require "luasnip"
+
+    local capabilities = cmp_lsp.default_capabilities()
+
+    local on_attach = function(client, bufnr)
+      -- Disable semantic tokens as we use Treesitter for syntax highlighting
+      client.server_capabilities.semanticTokensProvider = nil
+
+      -- Set keymaps only for the buffer that the language server is attached to
+      local opts = { buffer = bufnr }
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+      vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+      vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+    end
 
     require "fidget".setup {}
     require "mason".setup {}
     require "mason-lspconfig".setup {
-      ensure_installed = { "tsserver", "eslint", "lua_ls", "rust_analyzer", "gopls", },
+      ensure_installed = {
+        "tsserver",
+        "eslint",
+        "lua_ls",
+        "rust_analyzer",
+        "gopls",
+      },
       handlers = {
-        function(server) -- default handler (optional)
-          require "lspconfig"[server].setup {
-            capabilities = lsp_capabilities,
+        function(server) -- default handler
+          lspconfig[server].setup {
+            on_attach = on_attach,
+            capabilities = capabilities
           }
         end,
 
         lua_ls = function()
-          require "lspconfig".lua_ls.setup {
-            capabilities = lsp_capabilities,
+          lspconfig.lua_ls.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
             settings = {
               Lua = {
                 -- https://luals.github.io/wiki/settings/
@@ -54,7 +77,7 @@ return {
       snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-          require "luasnip".lsp_expand(args.body) -- For `luasnip` users.
+          luasnip.lsp_expand(args.body) -- For `luasnip` users.
         end,
       },
       mapping = cmp.mapping.preset.insert {
@@ -71,19 +94,7 @@ return {
       })
     }
 
-    -- Global mappings.
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-
-    -- Use LspAttach autocommand to only map the following keys after the language server attaches to the current buffer
-    vim.api.nvim_create_autocmd("LspAttach", {
-      desc = "LSP actions",
-      callback = function(event)
-        local opts = { buffer = event.buf }
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-        vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-        vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-      end,
-    })
   end
 }
