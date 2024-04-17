@@ -52,6 +52,7 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
             init_options = {
+              -- https://github.com/typescript-language-server/typescript-language-server/blob/master/docs/configuration.md#preferences-options
               preferences = {
                 importModuleSpecifierPreference = "non-relative",
                 importModuleSpecifierEnding = "js",
@@ -84,6 +85,11 @@ return {
       },
     }
 
+    -- Global keymaps (these aren't tied to a buffer)
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+
+    -- Auto completion
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
     cmp.setup {
@@ -94,10 +100,12 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert {
-        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
         ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
         ["<C-y>"] = cmp.mapping.confirm { select = true },
-        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-u>"] = cmp.mapping.scroll_docs(4),
+        ["<C-space>"] = cmp.mapping.complete(),
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
@@ -106,8 +114,5 @@ return {
         { name = "buffer" },
       })
     }
-
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
   end
 }

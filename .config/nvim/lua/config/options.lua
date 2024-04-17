@@ -52,8 +52,6 @@ vim.opt.termguicolors = true
 -- spell checking
 -- ]s will go to the next misspelled word.
 -- [s will go to the previous misspelled word.
--- zg will add word to dictionary
--- z= will open the list of suggestions for the misspelled word
--- :spellr will apply previous applied suggestion in the whole file
+-- zg will add word under the cursor to the spell file
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"

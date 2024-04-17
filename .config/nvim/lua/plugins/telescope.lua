@@ -7,6 +7,7 @@ return {
 
   config = function()
     local actions = require "telescope.actions"
+    local builtin = require "telescope.builtin"
 
     require "telescope".setup {
       defaults = {
@@ -62,8 +63,6 @@ return {
         },
       },
     }
-
-    local builtin = require "telescope.builtin"
 
     -- Files and searching
     vim.keymap.set("n", "<C-p>", builtin.find_files)
