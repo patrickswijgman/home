@@ -8,8 +8,11 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-q>", "<C-w>q")
 
+-- open explorer
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
 -- paste without losing the register
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set({ "n", "v" }, "<leader>p", [["_dP]])
 
 -- yank to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])

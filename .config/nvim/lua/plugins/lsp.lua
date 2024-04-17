@@ -7,12 +7,14 @@ return {
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip",
+    "j-hui/fidget.nvim",
   },
 
   config = function()
     local cmp = require "cmp"
     local lsp_capabilities = require "cmp_nvim_lsp".default_capabilities()
 
+    require "fidget".setup {}
     require "mason".setup {}
     require "mason-lspconfig".setup {
       ensure_installed = { "tsserver", "eslint", "lua_ls", "rust_analyzer", "gopls", },

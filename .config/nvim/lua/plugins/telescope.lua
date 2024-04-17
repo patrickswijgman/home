@@ -21,10 +21,11 @@ return {
     local builtin = require "telescope.builtin"
 
     -- Files and searching
-    vim.keymap.set("n", "<leader>pf", function() builtin.find_files { hidden = true } end)
+    vim.keymap.set("n", "<C-e>", function() builtin.find_files { hidden = true } end)
     vim.keymap.set("n", "<C-p>", function() builtin.git_files() end)
     vim.keymap.set("n", "<C-b>", function() builtin.buffers() end)
     vim.keymap.set("n", "<C-g>", function() builtin.grep_string { hidden = true } end)
+
     vim.keymap.set("n", "<C-f>", function()
       vim.ui.input({ prompt = "Grep > " }, function(input)
         if input == nil then
