@@ -52,7 +52,7 @@ vim.opt.termguicolors = true
 -- spell checking
 -- ]s will go to the next misspelled word.
 -- [s will go to the previous misspelled word.
--- zg add word to dictionary
+-- zg will add word to dictionary
 -- z= will open the list of suggestions for the misspelled word
 -- :spellr will apply previous applied suggestion in the whole file
 vim.opt.spell = true

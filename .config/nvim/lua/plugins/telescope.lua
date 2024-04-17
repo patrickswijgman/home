@@ -25,9 +25,10 @@ return {
     vim.keymap.set("n", "<C-p>", function() builtin.git_files() end)
     vim.keymap.set("n", "<C-b>", function() builtin.buffers() end)
     vim.keymap.set("n", "<C-g>", function() builtin.grep_string { hidden = true } end)
+    vim.keymap.set("n", "<C-h>", function() builtin.current_buffer_fuzzy_find() end)
 
     vim.keymap.set("n", "<C-f>", function()
-      vim.ui.input({ prompt = "Grep > " }, function(input)
+      vim.ui.input({ prompt = "Search > " }, function(input)
         if input == nil then
           return
         end
@@ -53,5 +54,7 @@ return {
 
     -- Other
     vim.keymap.set("n", "<leader>vh", builtin.help_tags)
+    vim.keymap.set("n", "<leader>sp", builtin.spell_suggest)
+    vim.keymap.set("n", "<leader>km", builtin.keymaps)
   end
 }
