@@ -25,3 +25,6 @@ whitespace
 uncommenting
 NERDTree
 undos
+bg
+nvim
+hl

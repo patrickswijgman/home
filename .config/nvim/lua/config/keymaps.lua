@@ -13,7 +13,16 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-q>", "<C-w>q")
 
 -- open explorer
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- % creates a file
+-- R renames a file
+-- mt assign the "target directory" used by the move and copy commands
+-- mf marks a file or directory. Any action that can be performed on multiple files depend on these marks
+-- mc copy the marked files in the target directory
+-- mm move the marked files to the target directory
+-- mx runs an external command on the marked files
+-- D deletes a file or an empty directory
+-- d creates a directory
+vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
 
 -- paste without losing the register
 vim.keymap.set({ "n", "v" }, "<leader>p", [["_dP]])

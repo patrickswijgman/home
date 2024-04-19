@@ -15,8 +15,5 @@ return {
       tailwind = true,     -- Enable tailwind colors
       always_update = false
     },
-
-    -- all the sub-options of filetypes apply to buftypes
-    buftypes = {},
   }
 }

@@ -1,14 +1,10 @@
 return {
   "tpope/vim-fugitive",
 
-  cmd = {
-    "Git",
-    "Gvdiffsplit",
-  },
-
   keys = {
     { "<leader>gs", vim.cmd.Git },
 
+    -- open merge conflict diff split window for current file
     -- ]c will go to the next merge conflict
     -- [c will go to the previous merge conflict
     { "<leader>gv", function() vim.cmd "Gvdiffsplit!" end },
