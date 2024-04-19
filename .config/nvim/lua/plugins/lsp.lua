@@ -19,7 +19,7 @@ return {
     local capabilities = cmp_lsp.default_capabilities()
 
     local on_attach = function(client, bufnr)
-      -- Disable semantic tokens as we use Treesitter for syntax highlighting
+      -- Disable semantic tokens as Treesitter is used for syntax highlighting instead
       client.server_capabilities.semanticTokensProvider = nil
 
       -- Set keymaps only for the buffer that the language server is attached to
@@ -90,8 +90,6 @@ return {
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
     -- Auto completion
-    local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
     cmp.setup {
       snippet = {
         -- REQUIRED - you must specify a snippet engine
@@ -100,11 +98,11 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert {
-        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
+        ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
         ["<C-y>"] = cmp.mapping.confirm { select = true },
-        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-u>"] = cmp.mapping.scroll_docs(4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
         ["<C-space>"] = cmp.mapping.complete(),
       },
       sources = cmp.config.sources({

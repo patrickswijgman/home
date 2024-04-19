@@ -55,3 +55,4 @@ vim.opt.termguicolors = true
 -- zg will add word under the cursor to the spell file
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
+vim.opt.spelloptions = "camel"
