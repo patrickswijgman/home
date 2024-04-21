@@ -5,7 +5,7 @@ return {
     transparent = false, -- Enable this to disable the bg color
     styles = {
       -- You can set any of the style values specified for `:h nvim_set_hl`
-      comments = {},
+      comments = { italic = true },
       functions = {},
       keywords = {},
       lsp = { underline = true },

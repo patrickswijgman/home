@@ -28,3 +28,5 @@ undos
 bg
 nvim
 hl
+uuid
+fg

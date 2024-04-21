@@ -10,9 +10,9 @@ set $up k
 set $right l
 
 set $bg #202020
-set $fg #FFE0B5
-set $dim #7F705A
-set $urgent #CA2E55
+set $fg #f0f0f0
+set $dim #787878
+set $urgent #ee6352
 
 set $bar_bg $bg
 set $bar_fg $fg
