@@ -4,7 +4,6 @@ return {
   event = { "BufWritePre" },
   cmd = { "ConformInfo" },
 
-  -- Everything in opts will be passed to setup()
   opts = {
     -- Define your formatters
     formatters_by_ft = {
