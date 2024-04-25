@@ -30,11 +30,20 @@ return {
     end
 
     require "fidget".setup {}
-    require "mason".setup {}
+    require "mason".setup {
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗"
+        }
+      }
+    }
     require "mason-lspconfig".setup {
       ensure_installed = {
         "tsserver",
         "eslint",
+        "tailwindcss",
         "lua_ls",
         "rust_analyzer",
         "gopls",

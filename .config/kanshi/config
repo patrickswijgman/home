@@ -1,7 +1,7 @@
 # Laptop - office
 
 profile {
-	output eDP-1 disable
+	output eDP-1 enable
 	output "Dell Inc. DELL U2720Q 87RFX83" scale 1.5
 }
 
@@ -11,7 +11,17 @@ profile {
 }
 
 profile {
-    output eDP-1 enable
+  output eDP-1 enable
+}
+
+profile {
+  output eDP-1 disable
+  output "Dell Inc. DELL S3422DWG 8BNTS63" mode 3440x1440@119.991Hz
+}
+
+profile {
+  output eDP-1 disable
+  output "Dell Inc. DELL S3422DWG 89XSS63" mode 3440x1440@59.973Hz
 }
 
 # Laptop - Home

@@ -22,7 +22,7 @@ vim.keymap.set("n", "<C-q>", "<C-w>q")
 -- mx runs an external command on the marked files
 -- D deletes a file or an empty directory
 -- d creates a directory
-vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
+-- vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
 
 -- paste without losing the register
 vim.keymap.set({ "n", "v" }, "<leader>p", [["_dP]])

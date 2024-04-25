@@ -4,7 +4,7 @@ end
 
 set -g fish_greeting
 
-abbr --add ga 'git add -u'
+abbr --add ga 'git add .'
 abbr --add --set-cursor gm 'git commit -m "%"'
 abbr --add gma 'git commit --amend'
 abbr --add gch 'git checkout'
