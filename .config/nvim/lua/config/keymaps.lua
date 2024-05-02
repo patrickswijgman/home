@@ -1,10 +1,6 @@
 -- set the <leader> key to space
 vim.g.mapleader = " "
 
--- buffer navigation
-vim.keymap.set("n", "<C-m>", vim.cmd.bnext)
-vim.keymap.set("n", "<C-n>", vim.cmd.bprev)
-
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")

@@ -1,6 +1,8 @@
 return {
   "NvChad/nvim-colorizer.lua",
 
+  ft = { "typescript", "javascript", "css", "html", "config", "swayconfig" },
+
   opts = {
     filetypes = { "*" },
 

@@ -6,19 +6,10 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
 
   config = function()
-    local telescope = require "telescope"
     local actions = require "telescope.actions"
     local builtin = require "telescope.builtin"
 
     require "telescope".setup {
-      extensions = {
-        file_browser = {
-          grouped = true,
-          hidden = true,
-          git_status = false,
-          dir_icon = "",
-        }
-      },
       defaults = {
         -- configure to use ripgrep when searching with grep_string or live_grep
         vimgrep_arguments = {
@@ -72,10 +63,6 @@ return {
         },
       },
     }
-
-    telescope.load_extension "file_browser"
-
-    vim.keymap.set("n", "<C-e>", telescope.extensions.file_browser.file_browser)
 
     vim.keymap.set("n", "<C-p>", builtin.find_files)
     vim.keymap.set("n", "<C-b>", builtin.buffers)

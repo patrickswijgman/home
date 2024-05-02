@@ -20,7 +20,9 @@ return {
     -- Swap the dark background with the normal one.
     swap_backgrounds = true,
     -- Override the styling of any highlight group.
-    override = {},
+    override = {
+      Delimiter = { italic = false },
+    },
     -- Cursorline options. Also includes visual/selection.
     cursorline = {
       -- Bold font in cursorline.
@@ -34,7 +36,7 @@ return {
     },
     telescope = {
       -- Available styles: `classic`, `flat`.
-      style = "flat",
+      style = "classic",
     },
   },
 
