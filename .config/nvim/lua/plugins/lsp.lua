@@ -44,6 +44,7 @@ return {
         "tsserver",
         "eslint",
         "tailwindcss",
+        "typos_lsp",
         "lua_ls",
         "rust_analyzer",
         "gopls",

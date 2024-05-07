@@ -1,6 +1,8 @@
 return {
   "AlexvZyl/nordic.nvim",
 
+  enabled = false,
+
   lazy = false,
   priority = 1000,
 

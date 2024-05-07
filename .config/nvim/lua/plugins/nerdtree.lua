@@ -1,8 +1,6 @@
 return {
   "https://github.com/preservim/nerdtree",
 
-  keys = { "<C-e>" },
-
   init = function()
     -- This setting tells vim whether to display hidden files by default.
     vim.g.NERDTreeShowHidden = true

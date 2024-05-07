@@ -9,10 +9,10 @@ set $down j
 set $up k
 set $right l
 
-set $bg #181818
-set $fg #d8d8d8
-set $dim #6c6c6c
-set $urgent #ab4642
+set $bg #ffffff
+set $fg #000000
+set $dim #7f7f7f
+set $urgent #ff0000
 
 set $bar_bg $bg
 set $bar_fg $fg
@@ -40,6 +40,7 @@ exec_always kanshi
 exec mako
 exec blueman-applet
 exec nm-applet --indicator
+exec /home/patrick/.config/sway/notifier/target/debug/notifier
 
 ### Idle configuration
 

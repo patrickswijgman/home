@@ -1,24 +1,40 @@
 colors:
   primary:
-    background: "#181818"
-    foreground: "#d8d8d8"
+    background: "#faf4ed"
+    foreground: "#575279"
+  cursor:
+    text: "#575279"
+    cursor: "#cecacd"
+  vi_mode_cursor:
+    text: "#575279"
+    cursor: "#cecacd"
+  selection:
+    text: "#575279"
+    background: "#dfdad9"
   normal:
-    black: "#181818"
-    red: "#ab4642"
-    green: "#a1b56c"
-    yellow: "#f7ca88"
-    blue: "#7cafc2"
-    magenta: "#ba8baf"
-    cyan: "#86c1b9"
-    white: "#d8d8d8"
+    black: "#f2e9e1"
+    red: "#b4637a"
+    green: "#286983"
+    yellow: "#ea9d34"
+    blue: "#56949f"
+    magenta: "#907aa9"
+    cyan: "#d7827e"
+    white: "#575279"
   bright:
-    black: "#585858"
-    red: "#ab4642"
-    green: "#a1b56c"
-    yellow: "#f7ca88"
-    blue: "#7cafc2"
-    magenta: "#ba8baf"
-    cyan: "#86c1b9"
-    white: "#f8f8f8"
+    black: "#9893a5"
+    red: "#b4637a"
+    green: "#286983"
+    yellow: "#ea9d34"
+    blue: "#56949f"
+    magenta: "#907aa9"
+    cyan: "#d7827e"
+    white: "#575279"
+  hints:
+    start:
+      foreground: "#797593"
+      background: "#fffaf3"
+    end:
+      foreground: "#9893a5"
+      background: "#fffaf3"
 font:
-  size: 12.0
+  size: 11.0
