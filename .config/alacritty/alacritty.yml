@@ -2,15 +2,6 @@ colors:
   primary:
     background: "#faf4ed"
     foreground: "#575279"
-  cursor:
-    text: "#575279"
-    cursor: "#cecacd"
-  vi_mode_cursor:
-    text: "#575279"
-    cursor: "#cecacd"
-  selection:
-    text: "#575279"
-    background: "#dfdad9"
   normal:
     black: "#f2e9e1"
     red: "#b4637a"

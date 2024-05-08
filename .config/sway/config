@@ -12,22 +12,24 @@ set $right l
 set $bg #ffffff
 set $fg #000000
 set $dim #7f7f7f
-set $urgent #ff0000
+set $urgent #d36060
 
 set $bar_bg $bg
 set $bar_fg $fg
 set $bar_dim $dim
 set $bar_urgent_bg $urgent
-set $bar_urgent_fg $fg
+set $bar_urgent_fg $bg
 
 set $focused_bg $bg
 set $focused_fg $fg
 set $focused_border $focused_bg
+
 set $inactive_bg $bg
 set $inactive_fg $dim
 set $inactive_border $inactive_bg
+
 set $urgent_bg $urgent
-set $urgent_fg $fg
+set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
 set $wallpaper #000000
