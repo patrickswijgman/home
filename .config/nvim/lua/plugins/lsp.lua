@@ -4,9 +4,14 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
     "L3MON4D3/LuaSnip",
+
     "j-hui/fidget.nvim",
   },
 
@@ -14,7 +19,6 @@ return {
     local cmp = require "cmp"
     local cmp_lsp = require "cmp_nvim_lsp"
     local lspconfig = require "lspconfig"
-    local luasnip = require "luasnip"
 
     local capabilities = cmp_lsp.default_capabilities()
 
@@ -41,13 +45,8 @@ return {
     }
     require "mason-lspconfig".setup {
       ensure_installed = {
-        "tsserver",
-        "eslint",
-        "tailwindcss",
-        "typos_lsp",
-        "lua_ls",
-        "rust_analyzer",
-        "gopls",
+        "html", "cssls", "tsserver", "eslint", "tailwindcss", "typos_lsp", "lua_ls", "rust_analyzer", "gopls",
+        "pyright", "ruff", "jsonls", "yamlls", "spectral"
       },
       handlers = {
         function(server) -- default handler
@@ -105,8 +104,12 @@ return {
       snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-          luasnip.lsp_expand(args.body) -- For `luasnip` users.
+          require "luasnip".lsp_expand(args.body)
         end,
+      },
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert {
         ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
@@ -116,12 +119,28 @@ return {
         ["<C-u>"] = cmp.mapping.scroll_docs(-4),
         ["<C-space>"] = cmp.mapping.complete(),
       },
-      sources = cmp.config.sources({
+      sources = cmp.config.sources {
         { name = "nvim_lsp" },
-        { name = "luasnip" }, -- For luasnip users.
-      }, {
         { name = "buffer" },
-      })
+      }
     }
+
+    -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore)
+    cmp.setup.cmdline({ "/", "?" }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = "buffer" }
+      }
+    })
+
+    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore)
+    cmp.setup.cmdline(":", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources {
+        { name = "path" },
+        { name = "cmdline" }
+      },
+      matching = { disallow_symbol_nonprefix_matching = false }
+    })
   end
 }

@@ -19,7 +19,7 @@ return {
     },
 
     styles = {
-      bold = true,
+      bold = false,
       italic = false,
       transparency = false,
     },
@@ -55,8 +55,15 @@ return {
       h6 = "foam",
     },
 
+    -- https://rosepinetheme.com/palette/ingredients/
     highlight_groups = {
-      ["@type"] = { bold = true }
+      ["Comment"] = { fg = "muted" },
+      ["@type"] = { fg = "pine" },
+      ["@type.builtin"] = { fg = "pine" },
+      ["@constant"] = { fg = "subtle" },
+      ["@constant.builtin"] = { fg = "subtle" },
+      ["@function.method.call"] = { fg = "rose" },
+      ["@variable.parameter"] = { fg = "text" },
     },
   },
 
