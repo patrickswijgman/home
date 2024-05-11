@@ -12,7 +12,6 @@ set $right l
 set $bg #191724
 set $fg #e0def4
 set $hl #403d52
-set $dim $fg
 set $urgent #eb6f92
 
 set $focused_bg $bg
@@ -20,7 +19,7 @@ set $focused_fg $fg
 set $focused_border $focused_bg
 
 set $inactive_bg $bg
-set $inactive_fg $dim
+set $inactive_fg $fg
 set $inactive_border $inactive_bg
 
 set $urgent_bg $urgent
@@ -29,12 +28,11 @@ set $urgent_border $urgent_bg
 
 set $bar_bg $bg
 set $bar_fg $fg
-set $bar_dim $dim
 set $bar_hl $hl
 set $bar_urgent_bg $urgent_bg
 set $bar_urgent_fg $urgent_fg
 
-set $wallpaper #000000
+set $wallpaper #191724
 
 include /etc/sway/config-vars.d/*
 
@@ -207,8 +205,8 @@ bar {
     background $bar_bg
     statusline $bar_fg
     focused_workspace $bar_hl $bar_hl $bar_fg
-    active_workspace $bar_bg $bar_bg $bar_dim
-    inactive_workspace $bar_bg $bar_bg $bar_dim
+    active_workspace $bar_bg $bar_bg $bar_fg
+    inactive_workspace $bar_bg $bar_bg $bar_fg
     urgent_workspace $bar_urgent_bg $bar_urgent_bg $bar_urgent_fg
   }
 }
