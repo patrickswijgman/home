@@ -9,16 +9,10 @@ set $down j
 set $up k
 set $right l
 
-set $bg #ffffff
-set $fg #000000
-set $dim #7f7f7f
-set $urgent #d36060
-
-set $bar_bg $bg
-set $bar_fg $fg
-set $bar_dim $dim
-set $bar_urgent_bg $urgent
-set $bar_urgent_fg $bg
+set $bg #3b313c
+set $fg #edd8bd
+set $dim $fg
+set $urgent #8b5760
 
 set $focused_bg $bg
 set $focused_fg $fg
@@ -29,8 +23,14 @@ set $inactive_fg $dim
 set $inactive_border $inactive_bg
 
 set $urgent_bg $urgent
-set $urgent_fg $bg
+set $urgent_fg $fg
 set $urgent_border $urgent_bg
+
+set $bar_bg $bg
+set $bar_fg $fg
+set $bar_dim $dim
+set $bar_urgent_bg $urgent_bg
+set $bar_urgent_fg $urgent_fg
 
 set $wallpaper #000000
 
@@ -185,6 +185,8 @@ bindsym $mod+a focus parent
 
 ### Appearance
 
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders both
 
 client.focused $focused_border $focused_bg $focused_fg $focused_border
@@ -202,7 +204,7 @@ bar {
   colors {
     background $bar_bg
     statusline $bar_fg
-    focused_workspace $bar_bg $bar_bg $bar_fg
+    focused_workspace $bar_fg $bar_fg $bar_bg
     active_workspace $bar_bg $bar_bg $bar_dim
     inactive_workspace $bar_bg $bar_bg $bar_dim
     urgent_workspace $bar_urgent_bg $bar_urgent_bg $bar_urgent_fg

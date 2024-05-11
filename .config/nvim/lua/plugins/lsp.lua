@@ -7,6 +7,7 @@ return {
 
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
@@ -119,10 +120,12 @@ return {
         ["<C-u>"] = cmp.mapping.scroll_docs(-4),
         ["<C-space>"] = cmp.mapping.complete(),
       },
-      sources = cmp.config.sources {
+      sources = cmp.config.sources({
         { name = "nvim_lsp" },
+        { name = "nvim_lua" },
+      }, {
         { name = "buffer" },
-      }
+      })
     }
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore)
@@ -136,11 +139,12 @@ return {
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore)
     cmp.setup.cmdline(":", {
       mapping = cmp.mapping.preset.cmdline(),
-      sources = cmp.config.sources {
+      sources = cmp.config.sources({
         { name = "path" },
+      }, {
         { name = "cmdline" }
-      },
-      matching = { disallow_symbol_nonprefix_matching = false }
+      }),
+      matching = { disallow_symbol_nonprefix_matching = false },
     })
   end
 }
