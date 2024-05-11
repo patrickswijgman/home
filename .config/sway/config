@@ -9,10 +9,10 @@ set $down j
 set $up k
 set $right l
 
-set $bg #3b313c
-set $fg #edd8bd
+set $bg #252627
+set $fg #fff9fb
 set $dim $fg
-set $urgent #8b5760
+set $urgent #bb0a21
 
 set $focused_bg $bg
 set $focused_fg $fg
