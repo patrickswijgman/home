@@ -42,7 +42,7 @@ exec_always kanshi
 exec mako
 exec blueman-applet
 exec nm-applet --indicator
-exec /home/patrick/.config/sway/notifier/target/debug/notifier
+exec sway-notifier
 
 ### Idle configuration
 
@@ -198,7 +198,7 @@ font pango:monospace 8
 
 bar {
   position bottom
-  status_command "$HOME/.config/sway/statusline/target/debug/statusline"
+  status_command sway-statusline
   tray_output none
   workspace_buttons yes
   colors {
