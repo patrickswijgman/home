@@ -1,31 +1,26 @@
 colors:
   primary:
-    background: "#faf4ed"
-    foreground: "#575279"
+    background: "0xfaf4ed"
+    foreground: "0x575279"
   normal:
-    black: "#f2e9e1"
-    red: "#b4637a"
-    green: "#286983"
-    yellow: "#ea9d34"
-    blue: "#56949f"
-    magenta: "#907aa9"
-    cyan: "#d7827e"
-    white: "#575279"
+    black: "0xf2e9e1"
+    red: "0xb4637a"
+    green: "0x286983"
+    yellow: "0xea9d34"
+    blue: "0x56949f"
+    magenta: "0x907aa9"
+    cyan: "0xd7827e"
+    white: "0x575279"
   bright:
-    black: "#9893a5"
-    red: "#b4637a"
-    green: "#286983"
-    yellow: "#ea9d34"
-    blue: "#56949f"
-    magenta: "#907aa9"
-    cyan: "#d7827e"
-    white: "#575279"
-  hints:
-    start:
-      foreground: "#797593"
-      background: "#fffaf3"
-    end:
-      foreground: "#9893a5"
-      background: "#fffaf3"
+    black: "0x9893a5"
+    red: "0xb4637a"
+    green: "0x286983"
+    yellow: "0xea9d34"
+    blue: "0x56949f"
+    magenta: "0x907aa9"
+    cyan: "0xd7827e"
+    white: "0x575279"
 font:
+  normal:
+    family: Fira Code
   size: 11.0

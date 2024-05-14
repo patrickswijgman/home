@@ -1,3 +1,6 @@
+# Helix editor configuration
+# https://docs.helix-editor.com/configuration.html
+
 theme = "rose_pine_dawn"
 
 [editor]
@@ -18,11 +21,10 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+# https://docs.helix-editor.com/remapping.html
+# https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs
 [keys.normal]
 C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-k = "jump_view_up"
 C-l = "jump_view_right"
-C-r = "redo"
-C-p = "file_picker"
-C-f = "global_search"

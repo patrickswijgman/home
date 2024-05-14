@@ -28,6 +28,6 @@ alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 
 fish_add_path --path $HOME/.cargo/bin
 fish_add_path --path /usr/local/go/bin
+fish_add_path --path $HOME/.spicetify
 
 fish_ssh_agent
-

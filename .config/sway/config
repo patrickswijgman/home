@@ -9,14 +9,14 @@ set $down j
 set $up k
 set $right l
 
-set $bg #191724
-set $fg #e0def4
-set $hl #403d52
-set $urgent #eb6f92
+set $bg "#191724"
+set $fg "#e0def4"
+set $hl "#403d52"
+set $urgent "#eb6f92"
 
-set $focused_bg $bg
+set $focused_bg $hl
 set $focused_fg $fg
-set $focused_border $focused_bg
+set $focused_border $bg
 
 set $inactive_bg $bg
 set $inactive_fg $fg
@@ -32,13 +32,14 @@ set $bar_hl $hl
 set $bar_urgent_bg $urgent_bg
 set $bar_urgent_fg $urgent_fg
 
-set $wallpaper #191724
+set $wallpaper $bg
 
 include /etc/sway/config-vars.d/*
 
 ### Startup
 
 exec_always kanshi
+
 exec mako
 exec blueman-applet
 exec nm-applet --indicator
@@ -154,13 +155,12 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 bindsym $mod+backslash inhibit_idle focus
 
 # You can "split" the current object of your focus with
-# $mod+v or $mod+x, for horizontal and vertical splits
+# $mod+v or $mod+s, for horizontal and vertical splits
 # respectively.
 bindsym $mod+v splith
-bindsym $mod+x splitv
+bindsym $mod+s splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -185,22 +185,23 @@ bindsym $mod+a focus parent
 
 ### Appearance
 
-default_border pixel 2
+title_align center
+titlebar_border_thickness 0
+titlebar_padding 2
+default_border pixel 1
 default_floating_border pixel 2
 hide_edge_borders both
 
-client.focused $focused_border $focused_bg $focused_fg $focused_border
-client.focused_inactive $inactive_border $inactive_bg $inactive_fg
-client.unfocused $inactive_border $inactive_bg $inactive_fg
-client.urgent $urgent_border $urgent_bg $urgent_fg
+client.focused $focused_border $focused_bg $focused_fg $focused_border $focused_border
+client.focused_inactive $inactive_border $inactive_bg $inactive_fg $inactive_border $inactive_border
+client.unfocused $inactive_border $inactive_bg $inactive_fg $inactive_border $inactive_border
+client.urgent $urgent_border $urgent_bg $urgent_fg $urgent_border $urgent_border
 
-font pango:monospace 8
+font pango:Fira Code,FontAwesome 9
 
 bar {
-  position bottom
   status_command sway-statusline
   tray_output none
-  workspace_buttons yes
   colors {
     background $bar_bg
     statusline $bar_fg

@@ -1,51 +1,36 @@
-### Language server configs
+# Helix language (server) configuration
+# https://docs.helix-editor.com/languages.html
+# https://github.com/helix-editor/helix/blob/master/languages.toml
 
-# Eslint language server config
-# Add the eslint language server manually, not available yet in 24.3
-[language-server.eslint]
-command = "vscode-eslint-language-server"
-args = ["--stdio"]
+# Language servers
 
-[language-server.eslint.config]
-nodePath = ""
-onIgnoredFiles = "off"
-quiet = false
-rulesCustomizations = []
-run = "onType"
-useESLintClass = false
-validate = "on"
-codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
-experimental = {}
-problems = { shortenToSingleLine = false }
-workingDirectory = { mode = "auto" }
-
-# Typescript language server config
 [language-server.typescript-language-server.config.preferences]
 importModuleSpecifierPreference = "non-relative"
 importModuleSpecifierEnding = "js"
 
-### Language configs
+# Languages
 
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["typescript-language-server", "eslint", "tailwindcss-ls"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "javascript"
+language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["typescript-language-server", "tailwindcss-ls"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -80,3 +65,7 @@ auto-format = true
 name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 auto-format = true
+
+[[language]]
+name = "bash"
+file-types = ["sh", { glob = "*/sway/config" }]
