@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "rose_pine_dawn"
+theme = "flatwhite_custom"
 
 [editor]
 scrolloff = 8
@@ -20,6 +20,14 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "spacer", "version-control"]
+center = []
+right = ["diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 # https://docs.helix-editor.com/remapping.html
 # https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs

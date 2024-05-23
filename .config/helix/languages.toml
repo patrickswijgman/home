@@ -7,6 +7,9 @@
 [language-server.typos]
 command = "typos-lsp"
 
+[language-server.scls]
+command = "simple-completion-language-server"
+
 [language-server.typescript-language-server]
 config.preferences.importModuleSpecifierPreference = "non-relative"
 config.preferences.importModuleSpecifierEnding = "js"
@@ -15,25 +18,25 @@ config.preferences.importModuleSpecifierEnding = "js"
 
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos", "scls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos", "scls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos", "scls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos"]
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos", "scls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
