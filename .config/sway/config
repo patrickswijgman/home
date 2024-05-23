@@ -9,30 +9,22 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#191724"
-set $fg "#e0def4"
-set $hl "#403d52"
-set $urgent "#eb6f92"
+set $bg "#ffffff"
+set $fg "#1e1e1e"
 
-set $focused_bg $hl
+set $focused_bg $bg
 set $focused_fg $fg
-set $focused_border $bg
+set $focused_border $fg
 
 set $inactive_bg $bg
-set $inactive_fg $fg
-set $inactive_border $inactive_bg
+set $inactive_fg "#7f7f7f"
+set $inactive_border $fg
 
-set $urgent_bg $urgent
+set $urgent_bg "#fe5f55"
 set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
-set $bar_bg $bg
-set $bar_fg $fg
-set $bar_hl $hl
-set $bar_urgent_bg $urgent_bg
-set $bar_urgent_fg $urgent_fg
-
-set $wallpaper $bg
+set $wallpaper "#000000"
 
 include /etc/sway/config-vars.d/*
 
@@ -83,7 +75,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_path | fuzzel --dmenu | xargs swaymsg exec --
 
 # Manually lock the screen
-bindsym $mod+Ctrl+l exec swaylock
+bindsym $mod+Ctrl+l exec swaylock -i "~/Wallpapers/blue-screen-of-death.png"
 
 # Take a screenshot
 bindsym $mod+Shift+s exec grimshot copy area
@@ -203,12 +195,12 @@ bar {
   status_command sway-statusline
   tray_output none
   colors {
-    background $bar_bg
-    statusline $bar_fg
-    focused_workspace $bar_hl $bar_hl $bar_fg
-    active_workspace $bar_bg $bar_bg $bar_fg
-    inactive_workspace $bar_bg $bar_bg $bar_fg
-    urgent_workspace $bar_urgent_bg $bar_urgent_bg $bar_urgent_fg
+    background $bg
+    statusline $fg
+    focused_workspace $focused_bg $focused_bg $focused_fg
+    active_workspace $inactive_bg $inactive_bg $inactive_fg
+    inactive_workspace $inactive_bg $inactive_bg $inactive_fg
+    urgent_workspace $urgent_bg $urgent_bg $urgent_fg
   }
 }
 

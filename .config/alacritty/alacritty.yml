@@ -1,25 +1,25 @@
 colors:
   primary:
-    background: "#f7f3ee"
-    foreground: "#605a52"
+    background: "#faf4ed"
+    foreground: "#575279"
   normal:
-    black: "#605a52"
-    red: "#ff1414"
-    green: "#2db448"
-    yellow: "#605a52"
-    blue: "#605a52"
-    magenta: "#605a52"
-    cyan: "#605a52"
-    white: "#605a52"
+    black: "#f2e9e1"
+    red: "#b4637a"
+    green: "#286983"
+    yellow: "#ea9d34"
+    blue: "#56949f"
+    magenta: "#907aa9"
+    cyan: "#d7827e"
+    white: "#575279"
   bright:
-    black: "#605a52"
-    red: "#ff1414"
-    green: "#2db448"
-    yellow: "#605a52"
-    blue: "#605a52"
-    magenta: "#605a52"
-    cyan: "#605a52"
-    white: "#605a52"
+    black: "#9893a5"
+    red: "#b4637a"
+    green: "#286983"
+    yellow: "#ea9d34"
+    blue: "#56949f"
+    magenta: "#907aa9"
+    cyan: "#d7827e"
+    white: "#575279"
 font:
   normal:
     family: Fira Code

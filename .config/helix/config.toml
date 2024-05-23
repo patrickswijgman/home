@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "flatwhite_custom"
+theme = "rose_pine_dawn"
 
 [editor]
 scrolloff = 8
