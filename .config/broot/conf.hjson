@@ -24,7 +24,7 @@
 # you can launch broot with `br -H`).
 # A popular flag is the `g` one which displays git related info.
 #
-# default_flags:
+default_flags: --sort-by-type
 
 ###############################################################
 # Terminal's title
@@ -130,7 +130,7 @@ special_paths: {
 # to cancel (for example when you just opened broot), uncomment
 # this parameter
 # 
-quit_on_last_cancel: true
+# quit_on_last_cancel: true
 
 ###############################################################
 # Search modes

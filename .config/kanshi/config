@@ -1,7 +1,7 @@
 # Laptop - office
 
 profile {
-	output eDP-1 disable
+	output eDP-1 enable
 	output "Dell Inc. DELL U2720Q 87RFX83" scale 1.5
 }
 

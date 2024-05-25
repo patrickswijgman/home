@@ -9,22 +9,22 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#ffffff"
-set $fg "#1e1e1e"
+set $bg "#f9f9fb"
+set $fg "#15141a"
 
 set $focused_bg $bg
 set $focused_fg $fg
 set $focused_border $fg
 
-set $inactive_bg $bg
-set $inactive_fg "#7f7f7f"
+set $inactive_bg "#f0f0f4"
+set $inactive_fg "#828287"
 set $inactive_border $fg
 
-set $urgent_bg "#fe5f55"
+set $urgent_bg "#ed6a5e"
 set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
-set $wallpaper "#000000"
+set $wallpaper $fg
 
 include /etc/sway/config-vars.d/*
 
@@ -78,6 +78,7 @@ bindsym $mod+d exec dmenu_path | fuzzel --dmenu | xargs swaymsg exec --
 bindsym $mod+Ctrl+l exec swaylock -i "~/Wallpapers/blue-screen-of-death.png"
 
 # Take a screenshot
+bindsym Print exec grimshot copy active
 bindsym $mod+Shift+s exec grimshot copy area
 
 # Reload the configuration file
@@ -179,7 +180,7 @@ bindsym $mod+a focus parent
 
 title_align center
 titlebar_border_thickness 0
-titlebar_padding 2
+titlebar_padding 3
 default_border pixel 1
 default_floating_border pixel 2
 hide_edge_borders both
