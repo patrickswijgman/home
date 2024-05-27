@@ -5,8 +5,8 @@ width=300
 height=100
 padding=10
 
-background-color=#5386e4ff
-border-color=#5386e4ff
-text-color=#f9f9fbff
+background-color=#5e81acff
+border-color=#5e81acff
+text-color=#eceff4ff
 
 font=Fira Code 11

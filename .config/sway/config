@@ -9,18 +9,18 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#f9f9fb"
-set $fg "#15141a"
+set $bg "#eceff4"
+set $fg "#2e3440"
 
 set $focused_bg $bg
 set $focused_fg $fg
 set $focused_border $fg
 
-set $inactive_bg "#f0f0f4"
-set $inactive_fg "#828287"
+set $inactive_bg "#d8dee9"
+set $inactive_fg "#4c566a"
 set $inactive_border $fg
 
-set $urgent_bg "#ed6a5e"
+set $urgent_bg "#bf616a"
 set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
