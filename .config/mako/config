@@ -4,9 +4,8 @@ anchor=top-center
 width=300
 height=100
 padding=10
-
-background-color=#5e81acff
-border-color=#5e81acff
-text-color=#eceff4ff
-
 font=Fira Code 11
+
+background-color=#4650E8FF
+border-color=#4650E8FF
+text-color=#FBFAFCFF

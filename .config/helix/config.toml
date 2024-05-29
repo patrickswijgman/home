@@ -1,15 +1,16 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "rose_pine_dawn"
+theme = "monokai_pro_custom"
 
 [editor]
 scrolloff = 8
 cursorline = true
+gutters = ["spacer", "diagnostics", "spacer", "line-numbers", "spacer"]
+rulers = [120]
 popup-border = "all"
 completion-timeout = 5
 completion-replace = false
-rulers = [120]
 mouse = false
 shell = ["fish", "-c"]
 
@@ -36,3 +37,4 @@ C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-k = "jump_view_up"
 C-l = "jump_view_right"
+esc = ["collapse_selection", "keep_primary_selection"]

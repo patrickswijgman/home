@@ -1,0 +1,4 @@
+# ~/src/helix/runtime/themes/monokai_pro.toml
+inherits = "monokai_pro"
+
+"tag" = "blue"

@@ -217,6 +217,12 @@ lines_before_match_in_preview: 1
 lines_after_match_in_preview: 1
 
 ###############################################################
+# When your search pattern is applied to a path, the path is
+# shown on each line so that you see why the line matches.
+#
+show_matching_characters_on_path_searches: true
+
+###############################################################
 # Imports
 #
 # While it's possible to have all configuration in one file,
@@ -239,12 +245,14 @@ imports: [
             unknown
         ]
         # (un)comment to choose your preferred skin
-        file: skins/dark-blue.hjson
+        //file: skins/dark-blue.hjson
         //file: skins/catppuccin-macchiato.hjson
         //file: skins/catppuccin-mocha.hjson
         //file: skins/dark-gruvbox.hjson
         //file: skins/dark-orange.hjson
         //file: skins/solarized-dark.hjson
+        //file: skins/native-16.hjson
+        file: skins/term.hjson
     }
 
     # This skin is imported when your terminal is light
@@ -253,6 +261,7 @@ imports: [
         # (un)comment to choose your preferred skin
         //file: skins/solarized-light.hjson
         //file: skins/white.hjson
-        file: skins/native-16.hjson
+        //file: skins/native-16.hjson
+        file: skins/term.hjson
     }
 ]

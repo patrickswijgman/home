@@ -9,18 +9,18 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#eceff4"
-set $fg "#2e3440"
+set $bg "#FBFAFC"
+set $fg "#222326"
 
 set $focused_bg $bg
 set $focused_fg $fg
 set $focused_border $fg
 
-set $inactive_bg "#d8dee9"
-set $inactive_fg "#4c566a"
+set $inactive_bg "#D3D2DA"
+set $inactive_fg "#66676F"
 set $inactive_border $fg
 
-set $urgent_bg "#bf616a"
+set $urgent_bg "#E3222F"
 set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
@@ -195,6 +195,7 @@ font pango:Fira Code,FontAwesome 9
 bar {
   status_command sway-statusline
   tray_output none
+  position top
   colors {
     background $bg
     statusline $fg
