@@ -11,6 +11,11 @@ profile {
 }
 
 profile {
+	output eDP-1 disable
+	output "Dell Inc. DELL S3422DWG F7CTS63"
+}
+
+profile {
   output eDP-1 enable
 }
 

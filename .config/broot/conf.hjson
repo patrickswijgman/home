@@ -223,6 +223,18 @@ lines_after_match_in_preview: 1
 show_matching_characters_on_path_searches: true
 
 ###############################################################
+# You can choose any of the following syntaxic coloring themes for previewed files:
+#
+#    GitHub
+#    SolarizedDark
+#    SolarizedLight
+#    EightiesDark
+#    MochaDark
+#    OceanDark
+#    OceanLight
+syntax_theme: OceanLight
+
+###############################################################
 # Imports
 #
 # While it's possible to have all configuration in one file,

@@ -23,18 +23,24 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "spacer", "version-control"]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
 center = []
-right = ["diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding"]
+right = ["diagnostics", "register", "position", "total-line-numbers", "file-encoding"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
+[editor.lsp]
+display-messages = true
+
 # https://docs.helix-editor.com/remapping.html
-# https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs
+# https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs#L239
 [keys.normal]
 C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-k = "jump_view_up"
 C-l = "jump_view_right"
+
+C-r = "redo"
+
 esc = ["collapse_selection", "keep_primary_selection"]
