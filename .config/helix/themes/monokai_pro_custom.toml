@@ -2,3 +2,4 @@
 inherits = "monokai_pro"
 
 "tag" = "blue"
+"variable.parameter" = "base8"
