@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "rose_pine"
+theme = "flatwhite_custom"
 
 [editor]
 scrolloff = 9999
@@ -16,10 +16,10 @@ completion-replace = false
 mouse = false
 shell = ["fish", "-c"]
 
-[editor.cursor-shape]
-normal = "block"
-insert = "bar"
-select = "underline"
+# [editor.cursor-shape]
+# normal = "block"
+# insert = "bar"
+# select = "underline"
 
 [editor.file-picker]
 hidden = false

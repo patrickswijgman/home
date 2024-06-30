@@ -2,4 +2,4 @@
 
 ## Palette
 
-https://goodpalette.io/4650e8-e3222f-adadb8
+https://coolors.co/3a2e39-1e555c-f4d8cd-edb183-f15152

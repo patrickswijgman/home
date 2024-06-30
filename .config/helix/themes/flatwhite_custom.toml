@@ -2,20 +2,19 @@
 inherits = "flatwhite"
 
 "comment" = { fg = "base3", modifiers = ["italic"] }
-"comment.line" = { fg = "base3", modifiers = ["italic"] }
-"comment.block" = { fg = "base3", modifiers = ["italic"] }
-"comment.block.documentation" = { fg = "base3", modifiers = ["italic"] }
-"operator" = { fg = "base1" }
+"comment.line" = {}
+"comment.block" = {}
+"comment.block.documentation" = {}
 "type" = { fg = "teal_text", bg = "teal_bg" }
 "variable" = { fg = "base1" }
 "variable.builtin" = { fg = "teal_text", bg = "teal_bg" }
-"variable.parameter" = { fg = "base1" }
+"variable.parameter" = {}
 
 "markup.heading" = { fg = "purple_text", bg = "purple_bg", modifiers = ["bold"] }
 "markup.raw" = { fg = "orange_text", bg = "orange_bg" }
 "markup.raw.inline" = { fg = "orange_text", bg = "orange_bg" }
 "markup.raw.block" = {}
-"markup.list" = { modifiers = ["bold"]}
+"markup.list" = { modifiers = ["bold"] }
 
 "ui.bufferline" = { fg = "base1", bg = "base6" }
 "ui.bufferline.active" = { fg = "base7", bg = "base1", modifiers = ["bold"] }
@@ -33,10 +32,10 @@ inherits = "flatwhite"
 "ui.selection.primary" = { fg = "base7", bg = "base1" }
 
 "ui.linenr" = { fg = "base1", bg = "base6" }
-"ui.linenr.selected" = { fg = "base7", bg = "base1"  }
+"ui.linenr.selected" = { fg = "base6", bg = "base1"  }
 
 "ui.menu" = { fg = "base1", bg = "base6" }
-"ui.menu.selected" = { fg = "base7", bg = "base1" }
+"ui.menu.selected" = { fg = "base6", bg = "base1" }
 
 "ui.statusline.inactive" = { fg = "base1", bg = "base5" }
 
