@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "flatwhite_custom"
+theme = "flatwhite_pro"
 
 [editor]
 scrolloff = 9999
@@ -16,10 +16,10 @@ completion-replace = false
 mouse = false
 shell = ["fish", "-c"]
 
-# [editor.cursor-shape]
-# normal = "block"
-# insert = "bar"
-# select = "underline"
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
 
 [editor.file-picker]
 hidden = false
@@ -51,6 +51,7 @@ C-a = "select_all"
 C-r = "redo"
 C-d = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
 C-u = "no_op"
+A-r = ":config-reload"
 A-h = "goto_previous_buffer"
 A-l = "goto_next_buffer"
 A-q = ":buffer-close"
