@@ -9,22 +9,22 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#3A2E39"
-set $fg "#F4D8CD"
+set $bg "#282a36"
+set $fg "#eff0eb"
 
 set $focused_bg $fg
 set $focused_fg $bg
-set $focused_border $bg
+set $focused_border $fg
 
 set $inactive_bg $bg
 set $inactive_fg $fg
-set $inactive_border $bg
+set $inactive_border $fg
 
-set $urgent_bg "#F15152"
+set $urgent_bg "#ff5c57"
 set $urgent_fg $bg
 set $urgent_border $urgent_bg
 
-set $wallpaper "#000000"
+set $wallpaper $bg
 
 include /etc/sway/config-vars.d/*
 
@@ -195,7 +195,7 @@ font pango:Fira Code,FontAwesome 9
 bar {
   status_command sway-statusline
   tray_output none
-  position top
+  position bottom
   colors {
     background $bg
     statusline $fg

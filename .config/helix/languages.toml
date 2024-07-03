@@ -1,5 +1,6 @@
 # Helix language (server) configuration
 # https://docs.helix-editor.com/languages.html
+# https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
 # https://github.com/helix-editor/helix/blob/master/languages.toml
 
 # Language servers
@@ -12,79 +13,83 @@ command = "simple-completion-language-server"
 
 [language-server.typescript-language-server]
 config.preferences.importModuleSpecifierPreference = "non-relative"
-config.preferences.importModuleSpecifierEnding = "js"
+config.preferences.importModuleSpecifierEnding     = "js"
 
 [language-server.ruff]
 command = "ruff-lsp"
 
 [language-server.pyright]
 command = "pyright-langserver"
-args = ["--stdio"]
+args    = ["--stdio"]
 
 # Languages
 
 [[language]]
-name = "typescript"
+name             = "typescript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-auto-format = true
+formatter        = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format      = true
 
 [[language]]
-name = "tsx"
+name             = "tsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-auto-format = true
+formatter        = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format      = true
 
 [[language]]
-name = "javascript"
+name             = "javascript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server", "typos"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-auto-format = true
+formatter        = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format      = true
 
 [[language]]
-name = "jsx"
+name             = "jsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server", "tailwindcss-ls", "typos"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-auto-format = true
+formatter        = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format      = true
 
 [[language]]
-name = "python"
+name             = "python"
 language-servers = ["pyright", "ruff", "typos"]
-auto-format = true
+auto-format      = true
 
 [[language]]
-name = "html"
+name             = "html"
 language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
-formatter = { command = "prettier", args = ["--parser", "html"] }
-auto-format = false
+formatter        = { command = "prettier", args = ["--parser", "html"] }
+auto-format      = false
 
 [[language]]
-name = "css"
+name             = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
-formatter = { command = "prettier", args = ["--parser", "css"] }
-auto-format = false
+formatter        = { command = "prettier", args = ["--parser", "css"] }
+auto-format      = false
 
 [[language]]
-name = "yaml"
-formatter = { command = "prettier", args = ["--parser", "yaml"] }
+name        = "yaml"
+formatter   = { command = "prettier", args = ["--parser", "yaml"] }
 auto-format = true
 
 [[language]]
-name = "json"
-formatter = { command = "prettier", args = ["--parser", "json"] }
+name        = "json"
+formatter   = { command = "prettier", args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]
-name = "jsonc"
-formatter = { command = "prettier", args = ["--parser", "jsonc"] }
+name        = "jsonc"
+formatter   = { command = "prettier", args = ["--parser", "jsonc"] }
 auto-format = true
 
 [[language]]
-name = "markdown"
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
+name        = "markdown"
+formatter   = { command = "prettier", args = ["--parser", "markdown"] }
 auto-format = true
 
 [[language]]
-name = "bash"
-file-types = ["sh", { glob = "*/sway/config" }, { glob = "*/kanshi/config"}]
+name        = "toml"
+formatter   = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
 
+[[language]]
+name       = "bash"
+file-types = ["sh", { glob = "*/sway/config" }, { glob = "*/kanshi/config" }]
