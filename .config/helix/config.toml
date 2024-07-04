@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "term"
+theme = "flatwhite_custom"
 
 [editor]
 scrolloff          = 9999

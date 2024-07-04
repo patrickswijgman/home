@@ -1,0 +1,124 @@
+# Author: Alexander Brevig <alexanderbrevig@gmail.com>, krfl <kr.fl@outlook.com>
+# Adopted from https://github.com/biletskyy/flatwhite-syntax
+#
+# https://github.com/helix-editor/helix/blob/master/book/src/themes.md
+
+"hint"                   = { fg = "base2", bg = "base6" }
+"info"                   = { fg = "base2", bg = "base6" }
+"warning"                = { fg = "orange_text", bg = "orange_bg" }
+"error"                  = { fg = "red_text", bg = "red_bg" }
+"diagnostic"             = {}
+"diagnostic.hint"        = { fg = "base2", bg = "base6" }
+"diagnostic.info"        = { fg = "base2", bg = "base6" }
+"diagnostic.warning"     = { fg = "orange_text", bg = "orange_bg" }
+"diagnostic.error"       = { fg = "red_text", bg = "red_bg" }
+"diagnostic.unnecessary" = { fg = "base3" }
+"diagnostic.deprecated"  = { fg = "base1", modifiers = ["crossed_out"] }
+
+"ui.background"             = { fg = "base1", bg = "base7" }
+"ui.background.separator"   = {}                                                   # Picker separator below input line
+"ui.window"                 = { fg = "base1", bg = "base6" }                       # Borderlines separating splits
+"ui.gutter"                 = {}
+"ui.gutter.selected"        = {}                                                   # Gutter for the line the cursor is on
+"ui.text"                   = { fg = "base1" }
+"ui.text.focus"             = { fg = "base1", modifiers = ["bold"] }               # The currently selected line in the picker
+"ui.text.inactive"          = { fg = "base3" }
+"ui.cursor"                 = { modifiers = ["reversed"] }
+"ui.cursor.match"           = { fg = "base2", bg = "base5" }                       #	Matching bracket etc.
+"ui.selection"              = { bg = "base5" }
+"ui.linenr"                 = { fg = "base1", bg = "base6" }
+"ui.linenr.selected"        = { fg = "base7", bg = "base1", modifiers = ["bold"] }
+"ui.virtual"                = { fg = "base1" }
+"ui.virtual.ruler"          = { bg = "base6" }
+"ui.bufferline"             = { fg = "base1", bg = "base5" }
+"ui.bufferline.active"      = { fg = "base7", bg = "base1", modifiers = ["bold"] }
+"ui.statusline"             = { fg = "base7", bg = "base1", modifiers = ["bold"] }
+"ui.statusline.inactive"    = { fg = "base3", bg = "base6", modifiers = ["bold"] }
+"ui.help"                   = { fg = "base1", bg = "base6" }                       # Description box for commands
+"ui.highlight"              = { bg = "base5" }                                     # Highlighted lines in the picker preview
+"ui.menu"                   = { fg = "base1", bg = "base6" }                       # Code and command completion menus
+"ui.menu.selected"          = { fg = "base7", bg = "base1" }                       # Selected autocomplete item
+"ui.menu.scroll"            = { fg = "base1", bg = "base6" }                       # fg sets thumb color, bg sets track color of scrollbar
+"ui.popup"                  = { fg = "base1", bg = "base6" }                       # Documentation popups (e.g. Space + k)
+"ui.cursorline.primary"     = { fg = "base1", bg = "base6" }
+"ui.cursorline.secondary"   = { fg = "base2", bg = "base6" }
+"ui.cursorcolumn.primary"   = {}
+"ui.cursorcolumn.secondary" = {}
+
+"attribute"                 = {}                                       # Class attributes, HTML tag attributes
+"type"                      = { fg = "teal_text", bg = "teal_bg" }
+"constructor"               = { fg = "teal_text", bg = "teal_bg" }
+"constant"                  = { fg = "base1" }
+"constant.builtin"          = { fg = "blue_text", bg = "blue_bg" }     # Special constants provided by the language (true, false, nil etc)
+"constant.character"        = { fg = "green_text", bg = "green_bg" }
+"constant.character.escape" = { fg = "orange_text", bg = "orange_bg" }
+"constant.numeric"          = { fg = "blue_text", bg = "blue_bg" }
+"string"                    = { fg = "green_text", bg = "green_bg" }
+"comment"                   = { fg = "base3", modifiers = ["italic"] }
+"variable"                  = { fg = "base1" }
+"label"                     = {}
+"punctuation"               = { fg = "base1", modifiers = ["bold"] }
+"keyword"                   = { fg = "purple_text", bg = "purple_bg" }
+"operator"                  = { fg = "base1", modifiers = ["bold"] }   # ||, +=, >, etc.
+"function"                  = {}
+"function.builtin"          = {}
+"function.method"           = {}
+"function.macro"            = {}
+"function.special"          = {}
+"tag"                       = { fg = "teal_text", bg = "teal_bg" }     # Tags (e.g. <body> in HTML)
+"namespace"                 = {}
+"special"                   = { fg = "blue_text", bg = "blue_bg" }     # Search match in picker
+"property"                  = {}
+
+"markup.heading"       = { fg = "purple_text", bg = "purple_bg" }
+"markup.list"          = { modifiers = ["bold"] }
+"markup.bold"          = { modifiers = ["bold"] }
+"markup.italic"        = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link"          = { fg = "blue_text", bg = "blue_bg", underline = { style = "line" } }
+"markup.link.url"      = { fg = "blue_text", bg = "blue_bg", underline = { style = "line" } }
+"markup.link.label"    = { fg = "blue_text", bg = "blue_bg", underline = { style = "line" } } # non-URL link references
+"markup.link.text"     = { fg = "green_text", bg = "green_bg" }
+"markup.quote"         = {}
+"markup.raw"           = {}
+"markup.raw.inline"    = {}
+"markup.raw.block"     = {}
+
+"diff.plus"           = {}
+"diff.minus"          = {}
+"diff.delta"          = {}
+"diff.delta.conflict" = {}
+
+[palette]
+base1            = "#605a52"
+base2            = "#93836c"
+base3            = "#b9a992"
+base4            = "#dcd3c6"
+base5            = "#e4ddd2"
+base6            = "#f1ece4"
+base7            = "#f7f3ee"
+accent           = "#6a4cff"
+orange_text      = "#5b5143"
+orange_text_sec  = "#957f5f"
+orange_bg        = "#f7e0c3"
+green_text       = "#525643"
+green_text_sec   = "#81895d"
+green_bg         = "#e2e9c1"
+teal_text        = "#465953"
+teal_text_sec    = "#5f8c7d"
+teal_bg          = "#d2ebe3"
+blue_text        = "#4c5361"
+blue_text_sec    = "#7382a0"
+blue_bg          = "#dde4f2"
+purple_text      = "#614c61"
+purple_text_sec  = "#9c739c"
+purple_bg        = "#f1ddf1"
+red_text         = "#8D3D3D"
+red_text_sec     = "#B85959"
+red_bg           = "#FFD7D7"
+diff_add         = "#2db448"
+diff_change      = "#f2a60d"
+diff_change_dark = "#795306"
+diff_delete      = "#ff1414"
+diff_renamed     = "#52aeff"
+white            = "#ffffff"

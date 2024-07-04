@@ -6,10 +6,10 @@
 "warning"                = "yellow"
 "error"                  = "red"
 "diagnostic"             = {}
-"diagnostic.hint"        = { fg = "black", bg = "blue" }
-"diagnostic.info"        = { fg = "black", bg = "blue" }
-"diagnostic.warning"     = { fg = "black", bg = "yellow" }
-"diagnostic.error"       = { fg = "black", bg = "red" }
+"diagnostic.hint"        = {}
+"diagnostic.info"        = {}
+"diagnostic.warning"     = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error"       = { underline = { color = "red", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated"  = { modifiers = ["crossed_out"] }
 
@@ -36,18 +36,14 @@
 "ui.virtual.inlay-hint.type"      = {}
 "ui.virtual.wrap"                 = {}
 "ui.virtual.jump-label"           = {}
-"ui.bufferline"                   = {}
-"ui.bufferline.active"            = { modifiers = ["reversed"] }
+"ui.bufferline"                   = { fg = "white", bg = "black" }
+"ui.bufferline.active"            = { fg = "black", bg = "white", modifiers = ["bold"] }
 "ui.statusline"                   = { fg = "black", bg = "white", modifiers = ["bold"] }
 "ui.statusline.inactive"          = { fg = "white", bg = "black", modifiers = ["bold"] }
-"ui.statusline.normal"            = {}
-"ui.statusline.insert"            = {}
-"ui.statusline.select"            = {}
-"ui.statusline.separator"         = {}
 "ui.help"                         = {}                                                   # Description box for commands
 "ui.highlight"                    = { bg = "gray" }                                      # Highlighted lines in the picker preview
 "ui.menu"                         = {}                                                   # Code and command completion menus
-"ui.menu.selected"                = { fg = "black", bg = "white" }                       # Selected autocomplete item
+"ui.menu.selected"                = { modifiers = ["reversed"] }                         # Selected autocomplete item
 "ui.menu.scroll"                  = {}                                                   # fg sets thumb color, bg sets track color of scrollbar
 "ui.popup"                        = {}                                                   # Documentation popups (e.g. Space + k)
 "ui.popup.info"                   = {}                                                   # Prompt for multiple key options (e.g. Space)
@@ -56,13 +52,13 @@
 "ui.cursorcolumn.primary"         = {}
 "ui.cursorcolumn.secondary"       = {}
 
-"attribute"                 = {}                                # Class attributes, HTML tag attributes
+"attribute"                 = {}                                      # Class attributes, HTML tag attributes
 "type"                      = "cyan"
 "constructor"               = "cyan"
-"constant"                  = {}
-"constant.builtin"          = "green"                           # Special constants provided by the language (true, false, nil etc)
+"constant"                  = "default"
+"constant.builtin"          = "green"                                 # Special constants provided by the language (true, false, nil etc)
 "constant.character"        = "yellow"
-"constant.character.escape" = "green"
+"constant.character.escape" = "yellow"
 "constant.numeric"          = "green"
 "string"                    = "yellow"
 "string.regexp"             = {}
@@ -71,52 +67,39 @@
 "string.special.url"        = {}
 "string.special.symbol"     = {}
 "comment"                   = { modifiers = ["dim", "italic"] }
-"variable"                  = {}
-"variable.builtin"          = {}                                # Reserved language variables (self, this, super, etc.)
-"variable.parameter"        = {}                                #  Function parameters
-"variable.other.member"     = {}                                #  Fields of composite data types (e.g. structs, unions)
+"variable"                  = "default"
 "label"                     = {}
-"punctuation"               = {}
-"punctuation.delimiter"     = {}                                # Commas, colons
-"punctuation.bracket"       = {}                                # Parentheses, angle brackets, etc.
-"punctuation.special"       = "magenta"                         # String interpolation brackets.
+"punctuation"               = "default"
+"punctuation.delimiter"     = { fg = "default", modifiers = ["dim"] } # Commas, colons
+"punctuation.bracket"       = {}                                      # Parentheses, angle brackets, etc.
+"punctuation.special"       = "magenta"                               # String interpolation brackets.
 "keyword"                   = "blue"
-"operator"                  = "magenta"                         # ||, +=, >, etc.
+"operator"                  = "magenta"                               # ||, +=, >, etc.
 "function"                  = {}
 "function.builtin"          = {}
 "function.method"           = {}
 "function.macro"            = {}
 "function.special"          = {}
-"tag"                       = "cyan"                            # Tags (e.g. <body> in HTML)
+"tag"                       = "cyan"                                  # Tags (e.g. <body> in HTML)
 "namespace"                 = {}
-"special"                   = {}                                # Search match in picker
+"special"                   = "green"                                 # Search match in picker
 "property"                  = {}
 
-"markup.heading"         = {}
-"markup.heading.marker"  = {}
-"markup.heading.1"       = {}
-"markup.heading.2"       = {}
-"markup.heading.3"       = {}
-"markup.heading.4"       = {}
-"markup.heading.5"       = {}
-"markup.heading.6"       = {}
-"markup.list"            = {}
-"markup.list.numbered"   = {}
-"markup.list.unnumbered" = {}
-"markup.list.checked"    = {}
-"markup.list.unchecked"  = {}
-"markup.bold"            = {}
-"markup.italic"          = {}
-"markup.strikethrough"   = {}
-"markup.link"            = { underline = { style = "line" } }
-"markup.link.url"        = { underline = { style = "line" } }
-"markup.link.label"      = {}                                 # non-URL link references
-"markup.link.text"       = {}
-"markup.quote"           = {}
-"markup.raw"             = {}
-"markup.raw.inline"      = {}
-"markup.raw.block"       = {}
-"diff.plus"              = "green"
-"diff.minus"             = "red"
-"diff.delta"             = "yellow"
-"diff.delta.conflict"    = "magenta"
+"markup.heading"       = "magenta"
+"markup.list"          = { modifiers = ["bold"] }
+"markup.bold"          = { modifiers = ["bold"] }
+"markup.italic"        = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link"          = { underline = { style = "line" } }
+"markup.link.url"      = { underline = { style = "line" } }
+"markup.link.label"    = { underline = { style = "line" } } # non-URL link references
+"markup.link.text"     = {}
+"markup.quote"         = {}
+"markup.raw"           = {}
+"markup.raw.inline"    = "yellow"
+"markup.raw.block"     = {}
+
+"diff.plus"           = "green"
+"diff.minus"          = "red"
+"diff.delta"          = "yellow"
+"diff.delta.conflict" = "magenta"
