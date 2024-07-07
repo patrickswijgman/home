@@ -1,7 +1,7 @@
 # Helix editor configuration
 # https://docs.helix-editor.com/configuration.html
 
-theme = "flatwhite_custom"
+theme = "autumn"
 
 [editor]
 scrolloff          = 9999

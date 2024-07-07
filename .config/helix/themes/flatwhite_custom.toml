@@ -56,6 +56,7 @@
 "string"                    = { fg = "green_text", bg = "green_bg" }
 "comment"                   = { fg = "base3", modifiers = ["italic"] }
 "variable"                  = { fg = "base1" }
+"variable.builtin"          = { fg = "purple_text", bg = "purple_bg" }
 "label"                     = {}
 "punctuation"               = { fg = "base1", modifiers = ["bold"] }
 "keyword"                   = { fg = "purple_text", bg = "purple_bg" }
