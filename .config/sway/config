@@ -12,8 +12,8 @@ set $right l
 set $bg "#222222"
 set $fg "#dddddd"
 
-set $focused_bg "#444450"
-set $focused_fg "#eeeef0"
+set $focused_bg "#504444"
+set $focused_fg "#f0eeee"
 set $focused_border $bg
 
 set $inactive_bg $bg
