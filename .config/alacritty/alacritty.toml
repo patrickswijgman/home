@@ -1,5 +1,5 @@
 # https://github.com/alacritty/alacritty-theme
-import = ["~/.config/alacritty/themes/themes/dark_pastels.toml"]
+import = ["~/.config/alacritty/themes/themes/alabaster_dark.toml"]
 
 [font]
 size = 11.0
