@@ -7,11 +7,9 @@ return {
 
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
-    "L3MON4D3/LuaSnip",
 
     "j-hui/fidget.nvim",
   },
@@ -29,9 +27,11 @@ return {
 
       -- Set keymaps only for the buffer that the language server is attached to
       local opts = { buffer = bufnr }
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-      vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-      vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+      vim.keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts)
+      vim.keymap.set({ "n", "v" }, "<leader>r", vim.lsp.buf.rename, opts)
+      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+      vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
     end
 
     require "fidget".setup {}
@@ -45,13 +45,10 @@ return {
       }
     }
     require "mason-lspconfig".setup {
-      ensure_installed = {
-        "html", "cssls", "tsserver", "eslint", "tailwindcss", "typos_lsp", "lua_ls", "rust_analyzer", "gopls",
-        "pyright", "ruff", "jsonls", "yamlls", "spectral"
-      },
+      automatic_installation = true,
       handlers = {
-        function(server) -- default handler
-          lspconfig[server].setup {
+        function(name) -- default handler
+          lspconfig[name].setup {
             on_attach = on_attach,
             capabilities = capabilities
           }
@@ -95,22 +92,14 @@ return {
       },
     }
 
-    -- Global keymaps (these aren't tied to a buffer)
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-
     -- Auto completion
     cmp.setup {
       snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-          require "luasnip".lsp_expand(args.body)
+          -- You need Neovim v0.10 to use vim.snippet
+          vim.snippet.expand(args.body)
         end,
-      },
-      window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert {
         ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
@@ -122,7 +111,6 @@ return {
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
-        { name = "nvim_lua" },
       }, {
         { name = "buffer" },
       })

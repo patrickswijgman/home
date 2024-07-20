@@ -48,12 +48,3 @@ vim.opt.updatetime = 50
 
 -- enable 24-bit RGB colors, requires compatible terminal
 vim.opt.termguicolors = true
-
--- spell checking
--- ]s will go to the next misspelled word.
--- [s will go to the previous misspelled word.
--- zg will add word under the cursor to the spell file
--- vim.opt.spell = true
--- vim.opt.spelllang = "en_us"
--- vim.opt.spelloptions = "camel"
--- vim.opt.spellcapcheck = ""
