@@ -25,6 +25,7 @@ abbr --add dcd 'docker compose down'
 abbr --add dcr 'docker compose run --rm'
 
 abbr --add lg lazygit
+abbr --add lgh lazygit -g ~/.home.git/ -w ~
 
 alias home='git --git-dir=$HOME/.home.git/ --work-tree=$HOME'
 

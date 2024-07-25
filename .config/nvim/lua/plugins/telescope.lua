@@ -5,23 +5,63 @@ return {
 
   dependencies = { "nvim-lua/plenary.nvim" },
 
-  config = function()
-    local actions = require "telescope.actions"
-    local builtin = require "telescope.builtin"
+  keys = {
+    { "<C-p>",      require "telescope.builtin".find_files },
+    { "<C-b>",      require "telescope.builtin".buffers },
+    { "<C-f>",      require "telescope.builtin".live_grep },
+    { "<C-g>",      require "telescope.builtin".grep_string },
+    { "<C-t>",      require "telescope.builtin".lsp_workspace_symbols },
+    { "gd",         require "telescope.builtin".lsp_definitions },
+    { "gt",         require "telescope.builtin".lsp_type_definitions },
+    { "gr",         require "telescope.builtin".lsp_references },
+    { "gi",         require "telescope.builtin".lsp_implementations },
+    { "go",         require "telescope.builtin".lsp_document_symbols },
+    { "ge",         require "telescope.builtin".diagnostics },
+    { "<leader>vh", require "telescope.builtin".help_tags },
+    { "<leader>sp", require "telescope.builtin".spell_suggest },
+  },
 
-    require "telescope".setup {
-      defaults = {
-        -- configure to use ripgrep when searching with grep_string or live_grep
-        vimgrep_arguments = {
+  opts = {
+    defaults = {
+      -- configure to use ripgrep when searching with grep_string or live_grep
+      vimgrep_arguments = {
+        "rg",
+        "--follow",        -- Follow symbolic links
+        "--hidden",        -- Search for hidden files
+        "--color=never",   -- Don't use colors, Telescope can't interpret them
+        "--no-heading",    -- Don't group matches by each file
+        "--with-filename", -- Print the file path with the matched lines
+        "--line-number",   -- Show line numbers
+        "--column",        -- Show column numbers
+        "--smart-case",    -- Smart case search
+
+        -- Exclude some patterns from search
+        "--glob=!**/.git/*",
+        "--glob=!**/.idea/*",
+        "--glob=!**/.vscode/*",
+        "--glob=!**/build/*",
+        "--glob=!**/dist/*",
+        "--glob=!**/yarn.lock",
+        "--glob=!**/package-lock.json",
+      },
+      mappings = {
+        i = {
+          ["<esc>"] = require "telescope.actions".close,
+          ["<C-down>"] = require "telescope.actions".cycle_history_next,
+          ["<C-up>"] = require "telescope.actions".cycle_history_prev,
+        },
+      },
+    },
+    pickers = {
+      find_files = {
+        -- configure to use ripgrep when searching for a file
+        find_command = {
           "rg",
-          "--follow",        -- Follow symbolic links
-          "--hidden",        -- Search for hidden files
-          "--color=never",   -- Don't use colors, Telescope can't interpret them
-          "--no-heading",    -- Don't group matches by each file
-          "--with-filename", -- Print the file path with the matched lines
-          "--line-number",   -- Show line numbers
-          "--column",        -- Show column numbers
-          "--smart-case",    -- Smart case search
+          "--files",       -- List all files
+          "--hidden",      -- Search for hidden files
+          "--sort=path",   -- Ascending sort by path
+          "--color=never", -- Don't use colors, Telescope can't interpret them
+          "--smart-case",  -- Smart case search
 
           -- Exclude some patterns from search
           "--glob=!**/.git/*",
@@ -32,52 +72,7 @@ return {
           "--glob=!**/yarn.lock",
           "--glob=!**/package-lock.json",
         },
-        mappings = {
-          i = {
-            ["<esc>"] = actions.close,
-            ["<C-down>"] = actions.cycle_history_next,
-            ["<C-up>"] = actions.cycle_history_prev,
-          },
-        },
       },
-      pickers = {
-        find_files = {
-          -- configure to use ripgrep when searching for a file
-          find_command = {
-            "rg",
-            "--files",       -- List all files
-            "--hidden",      -- Search for hidden files
-            "--sort=path",   -- Ascending sort by path
-            "--color=never", -- Don't use colors, Telescope can't interpret them
-            "--smart-case",  -- Smart case search
-
-            -- Exclude some patterns from search
-            "--glob=!**/.git/*",
-            "--glob=!**/.idea/*",
-            "--glob=!**/.vscode/*",
-            "--glob=!**/build/*",
-            "--glob=!**/dist/*",
-            "--glob=!**/yarn.lock",
-            "--glob=!**/package-lock.json",
-          },
-        },
-      },
-    }
-
-    vim.keymap.set("n", "<C-p>", builtin.find_files)
-    vim.keymap.set("n", "<C-b>", builtin.buffers)
-    vim.keymap.set("n", "<C-f>", builtin.live_grep)
-    vim.keymap.set("n", "<C-g>", builtin.grep_string)
-    vim.keymap.set("n", "<C-t>", builtin.lsp_workspace_symbols)
-
-    vim.keymap.set("n", "gd", builtin.lsp_definitions)
-    vim.keymap.set("n", "gt", builtin.lsp_type_definitions)
-    vim.keymap.set("n", "gr", builtin.lsp_references)
-    vim.keymap.set("n", "gi", builtin.lsp_implementations)
-    vim.keymap.set("n", "go", builtin.lsp_document_symbols)
-    vim.keymap.set("n", "ge", builtin.diagnostics)
-
-    vim.keymap.set("n", "<leader>vh", builtin.help_tags)
-    vim.keymap.set("n", "<leader>sp", builtin.spell_suggest)
-  end
+    },
+  }
 }

@@ -84,8 +84,8 @@
 
   MOZ_ENABLE_WAYLAND=1
 
-  EDITOR=zed
-  GIT_EDITOR=vim
+  EDITOR=nvim
+  GIT_EDITOR=nvim
   `
 
   # enable wireplumber session manager for pipewire

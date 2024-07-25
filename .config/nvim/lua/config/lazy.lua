@@ -1,27 +1,34 @@
-require "lazy".setup({
+require "lazy".setup {
   spec = "plugins",
   change_detection = {
-    -- automatically check for config file changes and reload the ui
-    enabled = true,
-    notify = false, -- get a notification when changes are found
+    enabled = false,
   },
-}, {
   ui = {
     -- Disable icons as the terminal does not use a powerline/nerd font.
     icons = {
-      cmd = "",
+      cmd = "",
       config = "",
-      event = "",
-      ft = "",
+      event = "",
+      favorite = "",
+      ft = "",
       init = "",
-      keys = "",
-      plugin = "",
+      import = "",
+      keys = "",
+      lazy = "",
+      loaded = " ",
+      not_loaded = " ",
+      plugin = "",
       runtime = "",
       require = "",
       source = "",
       start = "",
       task = "",
-      lazy = "",
+      list = {
+        "",
+        "",
+        "",
+        "",
+      },
     },
   },
-})
+}

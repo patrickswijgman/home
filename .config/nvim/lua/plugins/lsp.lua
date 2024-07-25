@@ -47,8 +47,8 @@ return {
     require "mason-lspconfig".setup {
       automatic_installation = true,
       handlers = {
-        function(name) -- default handler
-          lspconfig[name].setup {
+        function(server)
+          lspconfig[server].setup {
             on_attach = on_attach,
             capabilities = capabilities
           }
@@ -92,7 +92,6 @@ return {
       },
     }
 
-    -- Auto completion
     cmp.setup {
       snippet = {
         -- REQUIRED - you must specify a snippet engine

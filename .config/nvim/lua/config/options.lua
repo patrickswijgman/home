@@ -29,9 +29,6 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
--- use system clipboard
--- vim.opt.clipboard = "unnamedplus"
-
 -- keep undos between sessions, in case I accidentally close the editor for example
 vim.opt.undofile = true
 
