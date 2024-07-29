@@ -53,7 +53,7 @@
   ```bash
   sudo apt install \
   sway xwayland wl-clipboard swaylock swayidle mako-notifier kanshi grimshot xdg-desktop-portal-wlr \
-  curl wget unzip htop psmisc tlp fwupd \
+  curl wget unzip htop tree psmisc tlp fwupd \
   pipewire pipewire-audio pavucontrol pamixer \
   ripgrep \
   openvpn \

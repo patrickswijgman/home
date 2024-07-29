@@ -8,9 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "vim_mode": true,
-  "theme": "JetBrains New Dark",
+  "theme": "Everforest Dark",
   "tab_bar": {
-    "show": false,
+    "show": true,
     "show_nav_history_buttons": false
   },
   "soft_wrap": "editor_width",

@@ -12,15 +12,15 @@ set $right l
 set $bg "#000000"
 set $fg "#ffffff"
 
-set $focused_bg $fg
-set $focused_fg $bg
+set $focused_bg "#eeeeef"
+set $focused_fg "#55555f"
 set $focused_border $bg
 
 set $inactive_bg $bg
-set $inactive_fg $fg
+set $inactive_fg "#cccccc"
 set $inactive_border $bg
 
-set $urgent_bg "#bb4444"
+set $urgent_bg "#bb5555"
 set $urgent_fg "#ffeeee"
 set $urgent_border $urgent_bg
 

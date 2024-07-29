@@ -12,6 +12,6 @@ vim.keymap.set("n", "<C-q>", "<C-w>q")
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
 
--- disabled keybindings
+-- disable recording
 vim.keymap.set("n", "q", "<Nop>");
 vim.keymap.set("n", "Q", "<Nop>");
