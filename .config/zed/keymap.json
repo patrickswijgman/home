@@ -1,0 +1,41 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: Open Default Keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Editor",
+    "bindings": {}
+  },
+  // Put key-bindings here if you want them to work in normal & visual mode
+  {
+    "context": "VimControl && !menu",
+    "bindings": {}
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  // Put key-bindings here if you want them to work in insert mode
+  {
+    "context": "vim_mode == insert",
+    "bindings": {}
+  },
+  // Put key-bindings here (in addition to above) if you want them to work when no editor exists
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {}
+  }
+]
