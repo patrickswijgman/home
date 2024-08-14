@@ -4,37 +4,34 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
 {
+  "base_keymap": "VSCode",
   "vim_mode": true,
-  "theme": "Everforest Dark",
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "soft_wrap": "editor_width",
-  "wrap_guides": [80, 120],
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": "Rosé Pine",
   "languages": {
     "HTML": {
+      "formatter": "prettier",
       "format_on_save": "on"
     },
     "Markdown": {
+      "formatter": "prettier",
       "format_on_save": "on"
     }
   },
-  "language_servers": ["...", "!vtsls", "typescript-language-server"],
   "lsp": {
-    "typescript-language-server": {
+    "vtsls": {
       "initialization_options": {
-        "preferences": {
-          "importModuleSpecifierPreference": "non-relative",
-          "importModuleSpecifierEnding": "js"
+        "typescript": {
+          "preferences": {
+            "importModuleSpecifier": "non-relative",
+            "importModuleSpecifierEnding": "js"
+          }
         }
       }
     }
-  },
-  "terminal": {
-    "default_height": 800
   }
 }
