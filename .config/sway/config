@@ -9,21 +9,6 @@ set $down j
 set $up k
 set $right l
 
-set $bg "#000000"
-set $fg "#ffffff"
-
-set $focused_bg "#eeeeef"
-set $focused_fg "#55555f"
-set $focused_border $bg
-
-set $inactive_bg $bg
-set $inactive_fg "#cccccc"
-set $inactive_border $bg
-
-set $urgent_bg "#bb5555"
-set $urgent_fg "#ffeeee"
-set $urgent_border $urgent_bg
-
 include /etc/sway/config-vars.d/*
 
 ### Startup
@@ -176,32 +161,14 @@ bindsym $mod+a focus parent
 
 ### Appearance
 
-title_align center
-titlebar_border_thickness 0
-titlebar_padding 3
-default_border pixel 1
-default_floating_border pixel 2
-hide_edge_borders both
+font pango:monospace,FontAwesome 8
 
-client.focused $focused_border $focused_bg $focused_fg $focused_border $focused_border
-client.focused_inactive $inactive_border $inactive_bg $inactive_fg $inactive_border $inactive_border
-client.unfocused $inactive_border $inactive_bg $inactive_fg $inactive_border $inactive_border
-client.urgent $urgent_border $urgent_bg $urgent_fg $urgent_border $urgent_border
-
-font pango:Fira Code,FontAwesome 8
+### Bar
 
 bar {
   status_command sway-statusline
   tray_output none
   position bottom
-  colors {
-    background $bg
-    statusline $fg
-    focused_workspace $focused_bg $focused_bg $focused_fg
-    active_workspace $inactive_bg $inactive_bg $inactive_fg
-    inactive_workspace $inactive_bg $inactive_bg $inactive_fg
-    urgent_workspace $urgent_bg $urgent_bg $urgent_fg
-  }
 }
 
 include /etc/sway/config.d/*
