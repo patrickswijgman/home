@@ -9,10 +9,21 @@
 {
   "base_keymap": "VSCode",
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": "Rosé Pine",
+  "ui_font_size": 20,
+  "buffer_font_size": 20,
+  "theme": "Everforest Dark",
   "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
     "HTML": {
       "formatter": "prettier",
       "format_on_save": "on"
