@@ -2,6 +2,7 @@
 	rebase = true
 [push]
 	autoSetupRemote = true
+	default = current
 [user]
 	name = Patrick
 	email = patrick.swijgman@wearespindle.com
