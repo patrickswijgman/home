@@ -6,3 +6,5 @@
 [user]
 	name = Patrick
 	email = patrick.swijgman@wearespindle.com
+[core]
+	editor = vim
