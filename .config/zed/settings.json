@@ -13,7 +13,7 @@
   "buffer_font_size": 20,
   "theme": "Everforest Dark",
   "experimental.theme_overrides": {
-    "title_bar.inactive_background": "#21272b"
+    "title_bar.inactive_background": "#1b2024"
   },
   "languages": {
     "Python": {
