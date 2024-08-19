@@ -9,8 +9,9 @@
 {
   "base_keymap": "VSCode",
   "vim_mode": true,
-  "ui_font_size": 20,
-  "buffer_font_size": 20,
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+  "soft_wrap": "editor_width",
   "theme": "Everforest Dark",
   "experimental.theme_overrides": {
     "title_bar.inactive_background": "#1b2024"
