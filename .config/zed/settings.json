@@ -12,9 +12,9 @@
   "ui_font_size": 15,
   "buffer_font_size": 15,
   "soft_wrap": "editor_width",
-  "theme": "Everforest Dark",
+  "theme": "JetBrains New Dark",
   "experimental.theme_overrides": {
-    "title_bar.inactive_background": "#1b2024"
+    "title_bar.inactive_background": "#2B2D30"
   },
   "languages": {
     "Python": {
