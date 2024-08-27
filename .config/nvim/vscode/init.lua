@@ -44,6 +44,9 @@ require("lazy").setup({
             init = function()
                 vim.g.camelcasemotion_key = '<leader>'
             end
+        },
+        {
+            "tpope/vim-surround"
         }
     },
 })
