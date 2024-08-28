@@ -22,6 +22,7 @@ if vim.g.vscode then
     vim.notify = vscode.notify
 
     vim.keymap.set("n", "q", "<Nop>")
+    vim.keymap.set("n", "<Esc>", ":nohl<CR>", { silent = true, remap = true })
     vim.keymap.set("n", "<leader>h", function() vscode.action("workbench.action.focusLeftGroup") end)
     vim.keymap.set("n", "<leader>j", function() vscode.action("workbench.action.focusBelowGroup") end)
     vim.keymap.set("n", "<leader>k", function() vscode.action("workbench.action.focusAboveGroup") end)
