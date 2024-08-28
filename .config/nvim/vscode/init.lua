@@ -41,6 +41,22 @@ end
 require("lazy").setup({
     spec = {
         {
+            'nvim-treesitter/nvim-treesitter',
+            main = 'nvim-treesitter.configs',
+            opts = {
+                ensure_installed = {
+                    'c',
+                    'lua',
+                    'vim',
+                    'vimdoc',
+                    'query',
+                    'markdown',
+                    'markdown_inline',
+                },
+            },
+            build = ':TSUpdate',
+        },
+        {
             "bkad/CamelCaseMotion",
             init = function()
                 vim.g.camelcasemotion_key = '<leader>'
